@@ -24,7 +24,7 @@ import javax.validation.constraints.*;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-28T04:24:19.978343600+01:00[Africa/Casablanca]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-30T16:03:01.698280900+01:00[Africa/Casablanca]")
 @Validated
 @Api(value = "backin", description = "the backin API")
 public interface BackinApi {
@@ -44,7 +44,10 @@ public interface BackinApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to delete a backin in the system with its id", nickname = "deleteBackinById", notes = "", response = Boolean.class, tags={  })
+    @ApiOperation(value = "Path used to delete a backin in the system with its id", nickname = "deleteBackinById", notes = "", response = Boolean.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Backin deleted successfully", response = Boolean.class),
         @ApiResponse(code = 400, message = "Bad request. Backin ID must be an integer and larger than 0."),
@@ -79,7 +82,10 @@ public interface BackinApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to delete a backindetails in the system with its id", nickname = "deleteBackindetailsById", notes = "", response = Boolean.class, tags={  })
+    @ApiOperation(value = "Path used to delete a backindetails in the system with its id", nickname = "deleteBackindetailsById", notes = "", response = Boolean.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Backindetails deleted successfully", response = Boolean.class),
         @ApiResponse(code = 400, message = "Bad request. Backindetails ID must be an integer and larger than 0."),
@@ -114,7 +120,10 @@ public interface BackinApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Find a Backin in the system by its id", nickname = "getBackinById", notes = "", response = BackinDto.class, tags={  })
+    @ApiOperation(value = "Find a Backin in the system by its id", nickname = "getBackinById", notes = "", response = BackinDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Backin found successfully", response = BackinDto.class),
         @ApiResponse(code = 400, message = "Bad request. Backin ID must be an integer and larger than 0."),
@@ -153,7 +162,10 @@ public interface BackinApi {
      * @param filterRequest  (optional)
      * @return Backin list found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list backin that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getBackinList", notes = "", response = BackinDto.class, responseContainer = "List", tags={  })
+    @ApiOperation(value = "Path used to list backin that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getBackinList", notes = "", response = BackinDto.class, responseContainer = "List", authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Backin list found successfully", response = BackinDto.class, responseContainer = "List") })
     @RequestMapping(
@@ -188,7 +200,10 @@ public interface BackinApi {
      * @param filterRequest  (optional)
      * @return Backin page found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list backin page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getBackinPage", notes = "", response = PageofBackinDto.class, tags={  })
+    @ApiOperation(value = "Path used to list backin page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getBackinPage", notes = "", response = PageofBackinDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Backin page found successfully", response = PageofBackinDto.class) })
     @RequestMapping(
@@ -228,7 +243,10 @@ public interface BackinApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Find a Backindetails in the system by its id", nickname = "getBackindetailsById", notes = "", response = BackindetailsDto.class, tags={  })
+    @ApiOperation(value = "Find a Backindetails in the system by its id", nickname = "getBackindetailsById", notes = "", response = BackindetailsDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Backindetails found successfully", response = BackindetailsDto.class),
         @ApiResponse(code = 400, message = "Bad request. Backindetails ID must be an integer and larger than 0."),
@@ -267,7 +285,10 @@ public interface BackinApi {
      * @param filterRequest  (optional)
      * @return Backindetails list found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list backindetails that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getBackindetailsList", notes = "", response = BackindetailsDto.class, responseContainer = "List", tags={  })
+    @ApiOperation(value = "Path used to list backindetails that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getBackindetailsList", notes = "", response = BackindetailsDto.class, responseContainer = "List", authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Backindetails list found successfully", response = BackindetailsDto.class, responseContainer = "List") })
     @RequestMapping(
@@ -302,7 +323,10 @@ public interface BackinApi {
      * @param filterRequest  (optional)
      * @return Backindetails page found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list backindetails page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getBackindetailsPage", notes = "", response = PageofBackindetailsDto.class, tags={  })
+    @ApiOperation(value = "Path used to list backindetails page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getBackindetailsPage", notes = "", response = PageofBackindetailsDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Backindetails page found successfully", response = PageofBackindetailsDto.class) })
     @RequestMapping(
@@ -342,7 +366,10 @@ public interface BackinApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to save a new Backin in the system", nickname = "saveBackin", notes = "", response = BackinDto.class, tags={  })
+    @ApiOperation(value = "Path used to save a new Backin in the system", nickname = "saveBackin", notes = "", response = BackinDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Backin saved successfully", response = BackinDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),
@@ -387,7 +414,10 @@ public interface BackinApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to save a new Backindetails in the system", nickname = "saveBackindetails", notes = "", response = BackindetailsDto.class, tags={  })
+    @ApiOperation(value = "Path used to save a new Backindetails in the system", nickname = "saveBackindetails", notes = "", response = BackindetailsDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Backindetails saved successfully", response = BackindetailsDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),
@@ -432,7 +462,10 @@ public interface BackinApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to update or modify an existing backin in the system", nickname = "updateBackin", notes = "", response = BackinDto.class, tags={  })
+    @ApiOperation(value = "Path used to update or modify an existing backin in the system", nickname = "updateBackin", notes = "", response = BackinDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Backin updated successfully", response = BackinDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),
@@ -477,7 +510,10 @@ public interface BackinApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to update or modify an existing backindetails in the system", nickname = "updateBackindetails", notes = "", response = BackindetailsDto.class, tags={  })
+    @ApiOperation(value = "Path used to update or modify an existing backindetails in the system", nickname = "updateBackindetails", notes = "", response = BackindetailsDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Backindetails updated successfully", response = BackindetailsDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),

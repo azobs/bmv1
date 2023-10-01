@@ -22,7 +22,7 @@ import javax.validation.constraints.*;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-28T04:24:19.978343600+01:00[Africa/Casablanca]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-30T16:03:01.698280900+01:00[Africa/Casablanca]")
 @Validated
 @Api(value = "client", description = "the client API")
 public interface ClientApi {
@@ -42,7 +42,10 @@ public interface ClientApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to delete a client in the system with its id", nickname = "deleteClientById", notes = "", response = Boolean.class, tags={  })
+    @ApiOperation(value = "Path used to delete a client in the system with its id", nickname = "deleteClientById", notes = "", response = Boolean.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Client deleted successfully", response = Boolean.class),
         @ApiResponse(code = 400, message = "Bad request. Loading ID must be an integer and larger than 0."),
@@ -77,7 +80,10 @@ public interface ClientApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Find a Client in the system by its id", nickname = "getClientById", notes = "", response = ClientDto.class, tags={  })
+    @ApiOperation(value = "Find a Client in the system by its id", nickname = "getClientById", notes = "", response = ClientDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Client found successfully", response = ClientDto.class),
         @ApiResponse(code = 400, message = "Bad request. Client ID must be an integer and larger than 0."),
@@ -116,7 +122,10 @@ public interface ClientApi {
      * @param filterRequest  (optional)
      * @return Client list found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list client that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getClientList", notes = "", response = ClientDto.class, responseContainer = "List", tags={  })
+    @ApiOperation(value = "Path used to list client that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getClientList", notes = "", response = ClientDto.class, responseContainer = "List", authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Client list found successfully", response = ClientDto.class, responseContainer = "List") })
     @RequestMapping(
@@ -151,7 +160,10 @@ public interface ClientApi {
      * @param filterRequest  (optional)
      * @return Client page found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list client page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getClientPage", notes = "", response = PageofClientDto.class, tags={  })
+    @ApiOperation(value = "Path used to list client page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getClientPage", notes = "", response = PageofClientDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Client page found successfully", response = PageofClientDto.class) })
     @RequestMapping(
@@ -191,7 +203,10 @@ public interface ClientApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to save a new Client in the system", nickname = "saveClient", notes = "", response = ClientDto.class, tags={  })
+    @ApiOperation(value = "Path used to save a new Client in the system", nickname = "saveClient", notes = "", response = ClientDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Client saved successfully", response = ClientDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),
@@ -236,7 +251,10 @@ public interface ClientApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to update or modify an existing Client in the system", nickname = "updateClient", notes = "", response = ClientDto.class, tags={  })
+    @ApiOperation(value = "Path used to update or modify an existing Client in the system", nickname = "updateClient", notes = "", response = ClientDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Client updated successfully", response = ClientDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),

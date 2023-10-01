@@ -19,7 +19,7 @@ import javax.validation.constraints.*;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-28T04:24:19.978343600+01:00[Africa/Casablanca]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-30T16:03:01.698280900+01:00[Africa/Casablanca]")
 @Validated
 @Api(value = "loadresource", description = "the loadresource API")
 public interface LoadresourceApi {
@@ -34,7 +34,10 @@ public interface LoadresourceApi {
      * @param id The id of the element that represent the resource found. It&#39;s compulsory if not the operation can&#39;t proceed (required)
      * @return Resource found successfully (status code 200)
      */
-    @ApiOperation(value = "Load a picture", nickname = "loadResourceById", notes = "", response = org.springframework.core.io.Resource.class, tags={  })
+    @ApiOperation(value = "Load a picture", nickname = "loadResourceById", notes = "", response = org.springframework.core.io.Resource.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Resource found successfully", response = org.springframework.core.io.Resource.class) })
     @RequestMapping(

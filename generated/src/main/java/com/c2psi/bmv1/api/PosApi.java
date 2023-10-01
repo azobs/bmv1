@@ -22,7 +22,7 @@ import javax.validation.constraints.*;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-28T04:24:19.978343600+01:00[Africa/Casablanca]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-30T16:03:01.698280900+01:00[Africa/Casablanca]")
 @Validated
 @Api(value = "pos", description = "the pos API")
 public interface PosApi {
@@ -42,7 +42,10 @@ public interface PosApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to delete a pointofsale in the system with its id", nickname = "deletePosById", notes = "", response = Boolean.class, tags={  })
+    @ApiOperation(value = "Path used to delete a pointofsale in the system with its id", nickname = "deletePosById", notes = "", response = Boolean.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Pointofsale deleted successfully", response = Boolean.class),
         @ApiResponse(code = 400, message = "Bad request. Article ID must be an integer and larger than 0."),
@@ -77,7 +80,10 @@ public interface PosApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Find an Pointofsale in the system by its id", nickname = "getPosById", notes = "", response = PointofsaleDto.class, tags={  })
+    @ApiOperation(value = "Find an Pointofsale in the system by its id", nickname = "getPosById", notes = "", response = PointofsaleDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Pointofsale found successfully", response = PointofsaleDto.class),
         @ApiResponse(code = 400, message = "Bad request. Pointofsale ID must be an integer and larger than 0."),
@@ -116,7 +122,10 @@ public interface PosApi {
      * @param filterRequest  (optional)
      * @return Pointofsale list found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list pointofsale that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getPosList", notes = "", response = PointofsaleDto.class, responseContainer = "List", tags={  })
+    @ApiOperation(value = "Path used to list pointofsale that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getPosList", notes = "", response = PointofsaleDto.class, responseContainer = "List", authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Pointofsale list found successfully", response = PointofsaleDto.class, responseContainer = "List") })
     @RequestMapping(
@@ -151,7 +160,10 @@ public interface PosApi {
      * @param filterRequest  (optional)
      * @return Pointofsale page found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list Pointofsale page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getPosPage", notes = "", response = PageofPointofsaleDto.class, tags={  })
+    @ApiOperation(value = "Path used to list Pointofsale page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getPosPage", notes = "", response = PageofPointofsaleDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Pointofsale page found successfully", response = PageofPointofsaleDto.class) })
     @RequestMapping(
@@ -191,7 +203,10 @@ public interface PosApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to save a new Pointofsale in the system", nickname = "savePos", notes = "", response = PointofsaleDto.class, tags={  })
+    @ApiOperation(value = "Path used to save a new Pointofsale in the system", nickname = "savePos", notes = "", response = PointofsaleDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Pointofsale saved successfully", response = PointofsaleDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),
@@ -236,7 +251,10 @@ public interface PosApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to update or modify an existing Pointofsale in the system", nickname = "updatePos", notes = "", response = PointofsaleDto.class, tags={  })
+    @ApiOperation(value = "Path used to update or modify an existing Pointofsale in the system", nickname = "updatePos", notes = "", response = PointofsaleDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Pointofsale updated successfully", response = PointofsaleDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),

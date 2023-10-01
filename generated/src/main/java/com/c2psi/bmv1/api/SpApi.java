@@ -20,7 +20,7 @@ import javax.validation.constraints.*;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-28T04:24:19.978343600+01:00[Africa/Casablanca]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-30T16:03:01.698280900+01:00[Africa/Casablanca]")
 @Validated
 @Api(value = "sp", description = "the sp API")
 public interface SpApi {
@@ -40,7 +40,10 @@ public interface SpApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to delete a specialprice in the system with its id", nickname = "deleteSpecialpriceById", notes = "", response = Boolean.class, tags={  })
+    @ApiOperation(value = "Path used to delete a specialprice in the system with its id", nickname = "deleteSpecialpriceById", notes = "", response = Boolean.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Specialprice deleted successfully", response = Boolean.class),
         @ApiResponse(code = 400, message = "Bad request. Specialprice ID must be an integer and larger than 0."),
@@ -75,7 +78,10 @@ public interface SpApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Find a Specialprice in the system by its id", nickname = "getSpecialpriceById", notes = "", response = SpecialpriceDto.class, tags={  })
+    @ApiOperation(value = "Find a Specialprice in the system by its id", nickname = "getSpecialpriceById", notes = "", response = SpecialpriceDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Specialprice found successfully", response = SpecialpriceDto.class),
         @ApiResponse(code = 400, message = "Bad request. Specialprice ID must be an integer and larger than 0."),
@@ -119,7 +125,10 @@ public interface SpApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to save a new Specialprice of an article link to a Baseprice in the system", nickname = "saveSpecialprice", notes = "", response = SpecialpriceDto.class, tags={  })
+    @ApiOperation(value = "Path used to save a new Specialprice of an article link to a Baseprice in the system", nickname = "saveSpecialprice", notes = "", response = SpecialpriceDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Specialprice for a Baseprice of an article saved successfully", response = SpecialpriceDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),
@@ -164,7 +173,10 @@ public interface SpApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to update or modify an existing Specialprice in the system", nickname = "updateSpecialprice", notes = "", response = SpecialpriceDto.class, tags={  })
+    @ApiOperation(value = "Path used to update or modify an existing Specialprice in the system", nickname = "updateSpecialprice", notes = "", response = SpecialpriceDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Special price updated successfully", response = SpecialpriceDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),

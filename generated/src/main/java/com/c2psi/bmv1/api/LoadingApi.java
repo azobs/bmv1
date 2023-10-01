@@ -26,7 +26,7 @@ import javax.validation.constraints.*;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-28T04:24:19.978343600+01:00[Africa/Casablanca]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-30T16:03:01.698280900+01:00[Africa/Casablanca]")
 @Validated
 @Api(value = "loading", description = "the loading API")
 public interface LoadingApi {
@@ -46,7 +46,10 @@ public interface LoadingApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Close a Loading in the system by its id", nickname = "closeLoadingById", notes = "", response = LoadingDto.class, tags={  })
+    @ApiOperation(value = "Close a Loading in the system by its id", nickname = "closeLoadingById", notes = "", response = LoadingDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Loading closed successfully", response = LoadingDto.class),
         @ApiResponse(code = 400, message = "Bad request. Loading ID must be an integer and larger than 0."),
@@ -90,7 +93,10 @@ public interface LoadingApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to delete a loading in the system with its id", nickname = "deleteLoadingById", notes = "", response = Boolean.class, tags={  })
+    @ApiOperation(value = "Path used to delete a loading in the system with its id", nickname = "deleteLoadingById", notes = "", response = Boolean.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Loading deleted successfully", response = Boolean.class),
         @ApiResponse(code = 400, message = "Bad request. Loading ID must be an integer and larger than 0."),
@@ -125,7 +131,10 @@ public interface LoadingApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to delete a loadingdetails in the system with its id", nickname = "deleteLoadingdetailsById", notes = "", response = Boolean.class, tags={  })
+    @ApiOperation(value = "Path used to delete a loadingdetails in the system with its id", nickname = "deleteLoadingdetailsById", notes = "", response = Boolean.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Loadingdetails deleted successfully", response = Boolean.class),
         @ApiResponse(code = 400, message = "Bad request. Loading ID must be an integer and larger than 0."),
@@ -160,7 +169,10 @@ public interface LoadingApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to delete a packagingdetails in the system with its id", nickname = "deletePackagingdetailsById", notes = "", response = Boolean.class, tags={  })
+    @ApiOperation(value = "Path used to delete a packagingdetails in the system with its id", nickname = "deletePackagingdetailsById", notes = "", response = Boolean.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Packagingdetails deleted successfully", response = Boolean.class),
         @ApiResponse(code = 400, message = "Bad request. Loading ID must be an integer and larger than 0."),
@@ -195,7 +207,10 @@ public interface LoadingApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Find a Loading in the system by its id", nickname = "getLoadingById", notes = "", response = LoadingDto.class, tags={  })
+    @ApiOperation(value = "Find a Loading in the system by its id", nickname = "getLoadingById", notes = "", response = LoadingDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Loading found successfully", response = LoadingDto.class),
         @ApiResponse(code = 400, message = "Bad request. Loading ID must be an integer and larger than 0."),
@@ -234,7 +249,10 @@ public interface LoadingApi {
      * @param filterRequest  (optional)
      * @return Loading list found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list loading that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getLoadingList", notes = "", response = LoadingDto.class, responseContainer = "List", tags={  })
+    @ApiOperation(value = "Path used to list loading that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getLoadingList", notes = "", response = LoadingDto.class, responseContainer = "List", authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Loading list found successfully", response = LoadingDto.class, responseContainer = "List") })
     @RequestMapping(
@@ -269,7 +287,10 @@ public interface LoadingApi {
      * @param filterRequest  (optional)
      * @return Loading page found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list loading page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getLoadingPage", notes = "", response = PageofLoadingDto.class, tags={  })
+    @ApiOperation(value = "Path used to list loading page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getLoadingPage", notes = "", response = PageofLoadingDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Loading page found successfully", response = PageofLoadingDto.class) })
     @RequestMapping(
@@ -309,7 +330,10 @@ public interface LoadingApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Find a Loadingdetails in the system by its id", nickname = "getLoadingdetailsById", notes = "", response = LoadingdetailsDto.class, tags={  })
+    @ApiOperation(value = "Find a Loadingdetails in the system by its id", nickname = "getLoadingdetailsById", notes = "", response = LoadingdetailsDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Loadingdetails found successfully", response = LoadingdetailsDto.class),
         @ApiResponse(code = 400, message = "Bad request. Loadingdetails ID must be an integer and larger than 0."),
@@ -348,7 +372,10 @@ public interface LoadingApi {
      * @param filterRequest  (optional)
      * @return Loadingdetails list found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list loadingdetails that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getLoadingdetailsList", notes = "", response = LoadingdetailsDto.class, responseContainer = "List", tags={  })
+    @ApiOperation(value = "Path used to list loadingdetails that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getLoadingdetailsList", notes = "", response = LoadingdetailsDto.class, responseContainer = "List", authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Loadingdetails list found successfully", response = LoadingdetailsDto.class, responseContainer = "List") })
     @RequestMapping(
@@ -383,7 +410,10 @@ public interface LoadingApi {
      * @param filterRequest  (optional)
      * @return Loadingdetails page found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list loadingdetails page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getLoadingdetailsPage", notes = "", response = PageofLoadingdetailsDto.class, tags={  })
+    @ApiOperation(value = "Path used to list loadingdetails page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getLoadingdetailsPage", notes = "", response = PageofLoadingdetailsDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Loadingdetails page found successfully", response = PageofLoadingdetailsDto.class) })
     @RequestMapping(
@@ -423,7 +453,10 @@ public interface LoadingApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Find a Packagingdetails in the system by its id", nickname = "getPackagingdetailsById", notes = "", response = PackagingdetailsDto.class, tags={  })
+    @ApiOperation(value = "Find a Packagingdetails in the system by its id", nickname = "getPackagingdetailsById", notes = "", response = PackagingdetailsDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Packagingdetails found successfully", response = PackagingdetailsDto.class),
         @ApiResponse(code = 400, message = "Bad request. Packagingdetails ID must be an integer and larger than 0."),
@@ -462,7 +495,10 @@ public interface LoadingApi {
      * @param filterRequest  (optional)
      * @return Packagingdetails list found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list packagingdetails that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getPackagingdetailsList", notes = "", response = PackagingdetailsDto.class, responseContainer = "List", tags={  })
+    @ApiOperation(value = "Path used to list packagingdetails that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getPackagingdetailsList", notes = "", response = PackagingdetailsDto.class, responseContainer = "List", authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Packagingdetails list found successfully", response = PackagingdetailsDto.class, responseContainer = "List") })
     @RequestMapping(
@@ -497,7 +533,10 @@ public interface LoadingApi {
      * @param filterRequest  (optional)
      * @return Packagingdetails page found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list packagingdetails page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getPackagingdetailsPage", notes = "", response = PageofPackagingdetailsDto.class, tags={  })
+    @ApiOperation(value = "Path used to list packagingdetails page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getPackagingdetailsPage", notes = "", response = PageofPackagingdetailsDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Packagingdetails page found successfully", response = PageofPackagingdetailsDto.class) })
     @RequestMapping(
@@ -537,7 +576,10 @@ public interface LoadingApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Open a Loading in the system by its id", nickname = "openLoadingById", notes = "", response = LoadingDto.class, tags={  })
+    @ApiOperation(value = "Open a Loading in the system by its id", nickname = "openLoadingById", notes = "", response = LoadingDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Loading opened successfully", response = LoadingDto.class),
         @ApiResponse(code = 400, message = "Bad request. Loading ID must be an integer and larger than 0."),
@@ -581,7 +623,10 @@ public interface LoadingApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to save a new Loading in the system", nickname = "saveLoading", notes = "", response = LoadingDto.class, tags={  })
+    @ApiOperation(value = "Path used to save a new Loading in the system", nickname = "saveLoading", notes = "", response = LoadingDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Loading saved successfully", response = LoadingDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),
@@ -626,7 +671,10 @@ public interface LoadingApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to save a new Loadingdetails in the system", nickname = "saveLoadingdetails", notes = "", response = LoadingdetailsDto.class, tags={  })
+    @ApiOperation(value = "Path used to save a new Loadingdetails in the system", nickname = "saveLoadingdetails", notes = "", response = LoadingdetailsDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Loading details saved successfully", response = LoadingdetailsDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),
@@ -671,7 +719,10 @@ public interface LoadingApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to save a new Packagingdetails in the system", nickname = "savePackagingdetails", notes = "", response = PackagingdetailsDto.class, tags={  })
+    @ApiOperation(value = "Path used to save a new Packagingdetails in the system", nickname = "savePackagingdetails", notes = "", response = PackagingdetailsDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Packaging details saved successfully", response = PackagingdetailsDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),
@@ -716,7 +767,10 @@ public interface LoadingApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to update or modify an existing Loading in the system", nickname = "updateLoading", notes = "", response = LoadingDto.class, tags={  })
+    @ApiOperation(value = "Path used to update or modify an existing Loading in the system", nickname = "updateLoading", notes = "", response = LoadingDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Loading updated successfully", response = LoadingDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),
@@ -761,7 +815,10 @@ public interface LoadingApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to update or modify an existing Loadingdetails in the system", nickname = "updateLoadingdetails", notes = "", response = LoadingdetailsDto.class, tags={  })
+    @ApiOperation(value = "Path used to update or modify an existing Loadingdetails in the system", nickname = "updateLoadingdetails", notes = "", response = LoadingdetailsDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Loadingdetails updated successfully", response = LoadingdetailsDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),
@@ -806,7 +863,10 @@ public interface LoadingApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to update or modify an existing Packagingdetails in the system", nickname = "updatePackagingdetails", notes = "", response = PackagingdetailsDto.class, tags={  })
+    @ApiOperation(value = "Path used to update or modify an existing Packagingdetails in the system", nickname = "updatePackagingdetails", notes = "", response = PackagingdetailsDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Packagingdetails updated successfully", response = PackagingdetailsDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),

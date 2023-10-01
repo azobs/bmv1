@@ -20,7 +20,7 @@ import javax.validation.constraints.*;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-28T04:24:19.978343600+01:00[Africa/Casablanca]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-30T16:03:01.698280900+01:00[Africa/Casablanca]")
 @Validated
 @Api(value = "test", description = "the test API")
 public interface TestApi {
@@ -34,7 +34,10 @@ public interface TestApi {
      *
      * @return Sucessfull Test Operation (status code 200)
      */
-    @ApiOperation(value = "", nickname = "apiTest", notes = "", response = TestDto.class, tags={  })
+    @ApiOperation(value = "", nickname = "apiTest", notes = "", response = TestDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Sucessfull Test Operation", response = TestDto.class) })
     @RequestMapping(
@@ -67,7 +70,10 @@ public interface TestApi {
      *
      * @return Sucessfull Test secure Operation (status code 200)
      */
-    @ApiOperation(value = "", nickname = "apiTestSecure", notes = "", response = TestDto.class, tags={  })
+    @ApiOperation(value = "", nickname = "apiTestSecure", notes = "", response = TestDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Sucessfull Test secure Operation", response = TestDto.class) })
     @RequestMapping(
@@ -100,7 +106,10 @@ public interface TestApi {
      *
      * @return Sucessfull Test secure Operation (status code 200)
      */
-    @ApiOperation(value = "", nickname = "apiTestSecurebmv1", notes = "", response = TestDto.class, tags={  })
+    @ApiOperation(value = "", nickname = "apiTestSecurebmv1", notes = "", response = TestDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Sucessfull Test secure Operation", response = TestDto.class) })
     @RequestMapping(

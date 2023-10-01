@@ -22,7 +22,7 @@ import javax.validation.constraints.*;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-28T04:24:19.978343600+01:00[Africa/Casablanca]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-30T16:03:01.698280900+01:00[Africa/Casablanca]")
 @Validated
 @Api(value = "saleinvoice", description = "the saleinvoice API")
 public interface SaleinvoiceApi {
@@ -42,7 +42,10 @@ public interface SaleinvoiceApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to delete a Saleinvoice in the system with its id", nickname = "deleteSaleinvoiceById", notes = "", response = Boolean.class, tags={  })
+    @ApiOperation(value = "Path used to delete a Saleinvoice in the system with its id", nickname = "deleteSaleinvoiceById", notes = "", response = Boolean.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Saleinvoice deleted successfully", response = Boolean.class),
         @ApiResponse(code = 400, message = "Bad request. Saleinvoice ID must be an integer and larger than 0."),
@@ -77,7 +80,10 @@ public interface SaleinvoiceApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Find a Saleinvoice in the system by its id", nickname = "getSaleinvoiceById", notes = "", response = SaleinvoiceDto.class, tags={  })
+    @ApiOperation(value = "Find a Saleinvoice in the system by its id", nickname = "getSaleinvoiceById", notes = "", response = SaleinvoiceDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Saleinvoice found successfully", response = SaleinvoiceDto.class),
         @ApiResponse(code = 400, message = "Bad request. Saleinvoice ID must be an integer and larger than 0."),
@@ -116,7 +122,10 @@ public interface SaleinvoiceApi {
      * @param filterRequest  (optional)
      * @return Saleinvoice list found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list saleinvoice that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getSaleinvoiceList", notes = "", response = SaleinvoiceDto.class, responseContainer = "List", tags={  })
+    @ApiOperation(value = "Path used to list saleinvoice that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getSaleinvoiceList", notes = "", response = SaleinvoiceDto.class, responseContainer = "List", authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Saleinvoice list found successfully", response = SaleinvoiceDto.class, responseContainer = "List") })
     @RequestMapping(
@@ -151,7 +160,10 @@ public interface SaleinvoiceApi {
      * @param filterRequest  (optional)
      * @return Saleinvoice page found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list Saleinvoice page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getSaleinvoicePage", notes = "", response = PageofSaleinvoiceDto.class, tags={  })
+    @ApiOperation(value = "Path used to list Saleinvoice page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getSaleinvoicePage", notes = "", response = PageofSaleinvoiceDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Saleinvoice page found successfully", response = PageofSaleinvoiceDto.class) })
     @RequestMapping(
@@ -191,7 +203,10 @@ public interface SaleinvoiceApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to save a new Saleinvoice in the system", nickname = "saveSaleinvoice", notes = "", response = SaleinvoiceDto.class, tags={  })
+    @ApiOperation(value = "Path used to save a new Saleinvoice in the system", nickname = "saveSaleinvoice", notes = "", response = SaleinvoiceDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Saleinvoice saved successfully", response = SaleinvoiceDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),
@@ -236,7 +251,10 @@ public interface SaleinvoiceApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to update or modify an existing Saleinvoice in the system", nickname = "updateSaleinvoice", notes = "", response = SaleinvoiceDto.class, tags={  })
+    @ApiOperation(value = "Path used to update or modify an existing Saleinvoice in the system", nickname = "updateSaleinvoice", notes = "", response = SaleinvoiceDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Saleinvoice updated successfully", response = SaleinvoiceDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),

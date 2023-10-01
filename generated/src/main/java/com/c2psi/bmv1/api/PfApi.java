@@ -22,7 +22,7 @@ import javax.validation.constraints.*;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-28T04:24:19.978343600+01:00[Africa/Casablanca]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-30T16:03:01.698280900+01:00[Africa/Casablanca]")
 @Validated
 @Api(value = "pf", description = "the pf API")
 public interface PfApi {
@@ -42,7 +42,10 @@ public interface PfApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to delete a product formated in the system with its id", nickname = "deleteProductformatedById", notes = "", response = Boolean.class, tags={  })
+    @ApiOperation(value = "Path used to delete a product formated in the system with its id", nickname = "deleteProductformatedById", notes = "", response = Boolean.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Productformated deleted successfully", response = Boolean.class),
         @ApiResponse(code = 400, message = "Bad request. Productformated ID must be an integer and larger than 0."),
@@ -77,7 +80,10 @@ public interface PfApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Find a Productformated in the system by its id", nickname = "getProductformatedById", notes = "", response = ProductformatedDto.class, tags={  })
+    @ApiOperation(value = "Find a Productformated in the system by its id", nickname = "getProductformatedById", notes = "", response = ProductformatedDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Productformated found successfully", response = ProductformatedDto.class),
         @ApiResponse(code = 400, message = "Bad request. Productformated ID must be an integer and larger than 0."),
@@ -116,7 +122,10 @@ public interface PfApi {
      * @param filterRequest  (optional)
      * @return Productformated list found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list productformated that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getProductformatedList", notes = "", response = ProductformatedDto.class, responseContainer = "List", tags={  })
+    @ApiOperation(value = "Path used to list productformated that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getProductformatedList", notes = "", response = ProductformatedDto.class, responseContainer = "List", authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Productformated list found successfully", response = ProductformatedDto.class, responseContainer = "List") })
     @RequestMapping(
@@ -151,7 +160,10 @@ public interface PfApi {
      * @param filterRequest  (optional)
      * @return Productformated page found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list productformated page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getProductformatedPage", notes = "", response = PageofProductformatedDto.class, tags={  })
+    @ApiOperation(value = "Path used to list productformated page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getProductformatedPage", notes = "", response = PageofProductformatedDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Productformated page found successfully", response = PageofProductformatedDto.class) })
     @RequestMapping(
@@ -191,7 +203,10 @@ public interface PfApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to save a new product formated in the system", nickname = "saveProductformated", notes = "", response = ProductformatedDto.class, tags={  })
+    @ApiOperation(value = "Path used to save a new product formated in the system", nickname = "saveProductformated", notes = "", response = ProductformatedDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Product formated saved successfully", response = ProductformatedDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),
@@ -236,7 +251,10 @@ public interface PfApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to update or modify an existing product formated in the system", nickname = "updateProductformated", notes = "", response = ProductformatedDto.class, tags={  })
+    @ApiOperation(value = "Path used to update or modify an existing product formated in the system", nickname = "updateProductformated", notes = "", response = ProductformatedDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Productformated updated successfully", response = ProductformatedDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),

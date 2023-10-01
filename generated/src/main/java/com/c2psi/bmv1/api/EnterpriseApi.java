@@ -22,7 +22,7 @@ import javax.validation.constraints.*;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-28T04:24:19.978343600+01:00[Africa/Casablanca]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-30T16:03:01.698280900+01:00[Africa/Casablanca]")
 @Validated
 @Api(value = "enterprise", description = "the enterprise API")
 public interface EnterpriseApi {
@@ -42,7 +42,10 @@ public interface EnterpriseApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to delete a Enterprise in the system with its id", nickname = "deleteEnterpriseById", notes = "", response = Boolean.class, tags={  })
+    @ApiOperation(value = "Path used to delete a Enterprise in the system with its id", nickname = "deleteEnterpriseById", notes = "", response = Boolean.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Enterprise deleted successfully", response = Boolean.class),
         @ApiResponse(code = 400, message = "Bad request. Article ID must be an integer and larger than 0."),
@@ -77,7 +80,10 @@ public interface EnterpriseApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Find an Enterprise in the system by its id", nickname = "getEnterpriseById", notes = "", response = EnterpriseDto.class, tags={  })
+    @ApiOperation(value = "Find an Enterprise in the system by its id", nickname = "getEnterpriseById", notes = "", response = EnterpriseDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Enterprise found successfully", response = EnterpriseDto.class),
         @ApiResponse(code = 400, message = "Bad request. Enterprise ID must be an integer and larger than 0."),
@@ -116,7 +122,10 @@ public interface EnterpriseApi {
      * @param filterRequest  (optional)
      * @return Enterprise list found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list enterprise that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getEnterpriseList", notes = "", response = EnterpriseDto.class, responseContainer = "List", tags={  })
+    @ApiOperation(value = "Path used to list enterprise that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getEnterpriseList", notes = "", response = EnterpriseDto.class, responseContainer = "List", authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Enterprise list found successfully", response = EnterpriseDto.class, responseContainer = "List") })
     @RequestMapping(
@@ -151,7 +160,10 @@ public interface EnterpriseApi {
      * @param filterRequest  (optional)
      * @return Enterprise page found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list Enterprise page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getEnterprisePage", notes = "", response = PageofEnterpriseDto.class, tags={  })
+    @ApiOperation(value = "Path used to list Enterprise page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getEnterprisePage", notes = "", response = PageofEnterpriseDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Enterprise page found successfully", response = PageofEnterpriseDto.class) })
     @RequestMapping(
@@ -191,7 +203,10 @@ public interface EnterpriseApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to save a new Enterprise in the system", nickname = "saveEnterprise", notes = "", response = EnterpriseDto.class, tags={  })
+    @ApiOperation(value = "Path used to save a new Enterprise in the system", nickname = "saveEnterprise", notes = "", response = EnterpriseDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Enterprise saved successfully", response = EnterpriseDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),
@@ -236,7 +251,10 @@ public interface EnterpriseApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to update or modify an existing Enterprise in the system", nickname = "updateEnterprise", notes = "", response = EnterpriseDto.class, tags={  })
+    @ApiOperation(value = "Path used to update or modify an existing Enterprise in the system", nickname = "updateEnterprise", notes = "", response = EnterpriseDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Enterprise updated successfully", response = EnterpriseDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),

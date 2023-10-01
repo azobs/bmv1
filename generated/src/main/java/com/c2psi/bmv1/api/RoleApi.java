@@ -22,7 +22,7 @@ import javax.validation.constraints.*;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-28T04:24:19.978343600+01:00[Africa/Casablanca]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-30T16:03:01.698280900+01:00[Africa/Casablanca]")
 @Validated
 @Api(value = "role", description = "the role API")
 public interface RoleApi {
@@ -42,7 +42,10 @@ public interface RoleApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to delete a role in the system with its id", nickname = "deleteRoleById", notes = "", response = Boolean.class, tags={  })
+    @ApiOperation(value = "Path used to delete a role in the system with its id", nickname = "deleteRoleById", notes = "", response = Boolean.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Role deleted successfully", response = Boolean.class),
         @ApiResponse(code = 400, message = "Bad request. User ID must be an integer and larger than 0."),
@@ -77,7 +80,10 @@ public interface RoleApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Find a Role in the system by its id", nickname = "getRoleById", notes = "", response = RoleDto.class, tags={  })
+    @ApiOperation(value = "Find a Role in the system by its id", nickname = "getRoleById", notes = "", response = RoleDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Role found successfully", response = RoleDto.class),
         @ApiResponse(code = 400, message = "Bad request. Role ID must be an integer and larger than 0."),
@@ -121,7 +127,10 @@ public interface RoleApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Find a Role in the system by its login", nickname = "getRoleByRoletype", notes = "", response = RoleDto.class, tags={  })
+    @ApiOperation(value = "Find a Role in the system by its login", nickname = "getRoleByRoletype", notes = "", response = RoleDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Role found successfully", response = RoleDto.class),
         @ApiResponse(code = 400, message = "Bad request. Role type must be an string and not empty."),
@@ -160,7 +169,10 @@ public interface RoleApi {
      * @param filterRequest  (optional)
      * @return Role found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list role that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getRoleList", notes = "", response = RoleDto.class, responseContainer = "List", tags={  })
+    @ApiOperation(value = "Path used to list role that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getRoleList", notes = "", response = RoleDto.class, responseContainer = "List", authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Role found successfully", response = RoleDto.class, responseContainer = "List") })
     @RequestMapping(
@@ -195,7 +207,10 @@ public interface RoleApi {
      * @param filterRequest  (optional)
      * @return Role page found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list roles page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getRolePage", notes = "", response = PageofRoleDto.class, tags={  })
+    @ApiOperation(value = "Path used to list roles page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getRolePage", notes = "", response = PageofRoleDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Role page found successfully", response = PageofRoleDto.class) })
     @RequestMapping(
@@ -235,7 +250,10 @@ public interface RoleApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to save a new role in the system", nickname = "saveRole", notes = "", response = RoleDto.class, tags={  })
+    @ApiOperation(value = "Path used to save a new role in the system", nickname = "saveRole", notes = "", response = RoleDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Role saved successfully", response = RoleDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),
@@ -280,7 +298,10 @@ public interface RoleApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to update or modify an existing role in the system", nickname = "updateRole", notes = "", response = RoleDto.class, tags={  })
+    @ApiOperation(value = "Path used to update or modify an existing role in the system", nickname = "updateRole", notes = "", response = RoleDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Role updated successfully", response = RoleDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),

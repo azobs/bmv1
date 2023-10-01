@@ -23,7 +23,7 @@ import javax.validation.constraints.*;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-28T04:24:19.978343600+01:00[Africa/Casablanca]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-30T16:03:01.698280900+01:00[Africa/Casablanca]")
 @Validated
 @Api(value = "userbm_role", description = "the userbm_role API")
 public interface UserbmRoleApi {
@@ -43,7 +43,10 @@ public interface UserbmRoleApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to delete a userbm_role in the system with its id", nickname = "deleteUserbmRoleById", notes = "", response = Boolean.class, tags={  })
+    @ApiOperation(value = "Path used to delete a userbm_role in the system with its id", nickname = "deleteUserbmRoleById", notes = "", response = Boolean.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Userbm deleted successfully", response = Boolean.class),
         @ApiResponse(code = 400, message = "Bad request. User ID must be an integer and larger than 0."),
@@ -78,7 +81,10 @@ public interface UserbmRoleApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Find a UserbmRole in the system by its id", nickname = "getUserbmRoleById", notes = "", response = UserbmRoleDto.class, tags={  })
+    @ApiOperation(value = "Find a UserbmRole in the system by its id", nickname = "getUserbmRoleById", notes = "", response = UserbmRoleDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "UserbmRole found successfully", response = UserbmRoleDto.class),
         @ApiResponse(code = 400, message = "Bad request. UserRole ID must be an integer and larger than 0."),
@@ -117,7 +123,10 @@ public interface UserbmRoleApi {
      * @param filterRequest  (optional)
      * @return UserbmRole list found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list user_role that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getUserbmRoleList", notes = "", response = UserbmRoleDto.class, responseContainer = "List", tags={  })
+    @ApiOperation(value = "Path used to list user_role that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getUserbmRoleList", notes = "", response = UserbmRoleDto.class, responseContainer = "List", authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "UserbmRole list found successfully", response = UserbmRoleDto.class, responseContainer = "List") })
     @RequestMapping(
@@ -152,7 +161,10 @@ public interface UserbmRoleApi {
      * @param filterRequest  (optional)
      * @return UserbmRole page found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list userrole page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getUserbmRolePage", notes = "", response = PageofUserbmRoleDto.class, tags={  })
+    @ApiOperation(value = "Path used to list userrole page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getUserbmRolePage", notes = "", response = PageofUserbmRoleDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "UserbmRole page found successfully", response = PageofUserbmRoleDto.class) })
     @RequestMapping(
@@ -192,7 +204,10 @@ public interface UserbmRoleApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to save a new user_role in the system", nickname = "saveUserbmRole", notes = "", response = UserbmRoleDto.class, tags={  })
+    @ApiOperation(value = "Path used to save a new user_role in the system", nickname = "saveUserbmRole", notes = "", response = UserbmRoleDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Userbm_Role saved successfully", response = UserbmRoleDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),
@@ -237,7 +252,10 @@ public interface UserbmRoleApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to update or modify an existing user_role in the system", nickname = "updateUserbmRole", notes = "", response = UserbmRoleDto.class, tags={  })
+    @ApiOperation(value = "Path used to update or modify an existing user_role in the system", nickname = "updateUserbmRole", notes = "", response = UserbmRoleDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Userbm updated successfully", response = UserbmRoleDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),

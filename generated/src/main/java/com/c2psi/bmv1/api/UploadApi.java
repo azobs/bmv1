@@ -19,7 +19,7 @@ import javax.validation.constraints.*;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-28T04:24:19.978343600+01:00[Africa/Casablanca]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-30T16:03:01.698280900+01:00[Africa/Casablanca]")
 @Validated
 @Api(value = "upload", description = "the upload API")
 public interface UploadApi {
@@ -34,7 +34,10 @@ public interface UploadApi {
      * @param fileName  (optional)
      * @return Picture of article uploaded successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to upload a picture that represent an article in the system", nickname = "uploadPictureArticle", notes = "", response = String.class, tags={  })
+    @ApiOperation(value = "Path used to upload a picture that represent an article in the system", nickname = "uploadPictureArticle", notes = "", response = String.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Picture of article uploaded successfully", response = String.class) })
     @RequestMapping(
@@ -60,7 +63,10 @@ public interface UploadApi {
      * @param fileName  (optional)
      * @return Invoice uploaded successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to upload a picture that represent an invoice in the system", nickname = "uploadPictureInvoice", notes = "", response = String.class, tags={  })
+    @ApiOperation(value = "Path used to upload a picture that represent an invoice in the system", nickname = "uploadPictureInvoice", notes = "", response = String.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Invoice uploaded successfully", response = String.class) })
     @RequestMapping(
@@ -86,7 +92,10 @@ public interface UploadApi {
      * @param fileName  (optional)
      * @return Resource uploaded successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to upload a picture that represent a logo in the system", nickname = "uploadPictureLogo", notes = "", response = String.class, tags={  })
+    @ApiOperation(value = "Path used to upload a picture that represent a logo in the system", nickname = "uploadPictureLogo", notes = "", response = String.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Resource uploaded successfully", response = String.class) })
     @RequestMapping(
@@ -112,7 +121,10 @@ public interface UploadApi {
      * @param fileName  (optional)
      * @return Picture uploaded successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to upload a picture that represent a person in the system", nickname = "uploadPictureofPerson", notes = "", response = String.class, tags={  })
+    @ApiOperation(value = "Path used to upload a picture that represent a person in the system", nickname = "uploadPictureofPerson", notes = "", response = String.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Picture uploaded successfully", response = String.class) })
     @RequestMapping(
@@ -138,7 +150,10 @@ public interface UploadApi {
      * @param fileName  (optional)
      * @return Picture uploaded successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to upload a picture that represent a formated product in the system", nickname = "uploadPictureofProductformated", notes = "", response = String.class, tags={  })
+    @ApiOperation(value = "Path used to upload a picture that represent a formated product in the system", nickname = "uploadPictureofProductformated", notes = "", response = String.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Picture uploaded successfully", response = String.class) })
     @RequestMapping(

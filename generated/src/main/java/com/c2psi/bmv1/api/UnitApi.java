@@ -24,7 +24,7 @@ import javax.validation.constraints.*;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-28T04:24:19.978343600+01:00[Africa/Casablanca]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-30T16:03:01.698280900+01:00[Africa/Casablanca]")
 @Validated
 @Api(value = "unit", description = "the unit API")
 public interface UnitApi {
@@ -44,7 +44,10 @@ public interface UnitApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to delete a unit in the system with its id", nickname = "deleteUnitById", notes = "", response = Boolean.class, tags={  })
+    @ApiOperation(value = "Path used to delete a unit in the system with its id", nickname = "deleteUnitById", notes = "", response = Boolean.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Unit deleted successfully", response = Boolean.class),
         @ApiResponse(code = 400, message = "Bad request. Unit ID must be an integer and larger than 0."),
@@ -79,7 +82,10 @@ public interface UnitApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to delete a unit conversion in the system with its id", nickname = "deleteUnitconversionById", notes = "", response = Boolean.class, tags={  })
+    @ApiOperation(value = "Path used to delete a unit conversion in the system with its id", nickname = "deleteUnitconversionById", notes = "", response = Boolean.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Unitconversion deleted successfully", response = Boolean.class),
         @ApiResponse(code = 400, message = "Bad request. Unitconversion ID must be an integer and larger than 0."),
@@ -114,7 +120,10 @@ public interface UnitApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Find a Unit in the system by its id", nickname = "getUnitById", notes = "", response = UnitDto.class, tags={  })
+    @ApiOperation(value = "Find a Unit in the system by its id", nickname = "getUnitById", notes = "", response = UnitDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Unit found successfully", response = UnitDto.class),
         @ApiResponse(code = 400, message = "Bad request. Unit ID must be an integer and larger than 0."),
@@ -153,7 +162,10 @@ public interface UnitApi {
      * @param filterRequest  (optional)
      * @return Unit list found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list unit that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getUnitList", notes = "", response = UnitDto.class, responseContainer = "List", tags={  })
+    @ApiOperation(value = "Path used to list unit that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getUnitList", notes = "", response = UnitDto.class, responseContainer = "List", authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Unit list found successfully", response = UnitDto.class, responseContainer = "List") })
     @RequestMapping(
@@ -188,7 +200,10 @@ public interface UnitApi {
      * @param filterRequest  (optional)
      * @return Unit page found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list unit page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getUnitPage", notes = "", response = PageofUnitDto.class, tags={  })
+    @ApiOperation(value = "Path used to list unit page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getUnitPage", notes = "", response = PageofUnitDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Unit page found successfully", response = PageofUnitDto.class) })
     @RequestMapping(
@@ -228,7 +243,10 @@ public interface UnitApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Find a Unitconversion in the system by its id", nickname = "getUnitconversionById", notes = "", response = UnitconversionDto.class, tags={  })
+    @ApiOperation(value = "Find a Unitconversion in the system by its id", nickname = "getUnitconversionById", notes = "", response = UnitconversionDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Unitconversion found successfully", response = UnitconversionDto.class),
         @ApiResponse(code = 400, message = "Bad request. Unitconversion ID must be an integer and larger than 0."),
@@ -267,7 +285,10 @@ public interface UnitApi {
      * @param filterRequest  (optional)
      * @return Unitconversion list found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list unitconversion that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getUnitconversionList", notes = "", response = UnitconversionDto.class, responseContainer = "List", tags={  })
+    @ApiOperation(value = "Path used to list unitconversion that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getUnitconversionList", notes = "", response = UnitconversionDto.class, responseContainer = "List", authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Unitconversion list found successfully", response = UnitconversionDto.class, responseContainer = "List") })
     @RequestMapping(
@@ -302,7 +323,10 @@ public interface UnitApi {
      * @param filterRequest  (optional)
      * @return Unitconversion page found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list unitconversion page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getUnitconversionPage", notes = "", response = PageofUnitconversionDto.class, tags={  })
+    @ApiOperation(value = "Path used to list unitconversion page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getUnitconversionPage", notes = "", response = PageofUnitconversionDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Unitconversion page found successfully", response = PageofUnitconversionDto.class) })
     @RequestMapping(
@@ -342,7 +366,10 @@ public interface UnitApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to save a new unit used to sell productformated in the system", nickname = "saveUnit", notes = "", response = UnitDto.class, tags={  })
+    @ApiOperation(value = "Path used to save a new unit used to sell productformated in the system", nickname = "saveUnit", notes = "", response = UnitDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Unit saved successfully", response = UnitDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),
@@ -387,7 +414,10 @@ public interface UnitApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to save a new unitconversion used to sell productformated in the system", nickname = "saveUnitconversion", notes = "", response = UnitconversionDto.class, tags={  })
+    @ApiOperation(value = "Path used to save a new unitconversion used to sell productformated in the system", nickname = "saveUnitconversion", notes = "", response = UnitconversionDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Unitconversion saved successfully", response = UnitconversionDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),
@@ -432,7 +462,10 @@ public interface UnitApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to update or modify an existing unit in the system", nickname = "updateUnit", notes = "", response = UnitDto.class, tags={  })
+    @ApiOperation(value = "Path used to update or modify an existing unit in the system", nickname = "updateUnit", notes = "", response = UnitDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Unit updated successfully", response = UnitDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),
@@ -477,7 +510,10 @@ public interface UnitApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to update or modify an existing unitconversion in the system", nickname = "updateUnitconversion", notes = "", response = UnitconversionDto.class, tags={  })
+    @ApiOperation(value = "Path used to update or modify an existing unitconversion in the system", nickname = "updateUnitconversion", notes = "", response = UnitconversionDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Unitconversion updated successfully", response = UnitconversionDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),

@@ -22,7 +22,7 @@ import javax.validation.constraints.*;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-28T04:24:19.978343600+01:00[Africa/Casablanca]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-30T16:03:01.698280900+01:00[Africa/Casablanca]")
 @Validated
 @Api(value = "userbm", description = "the userbm API")
 public interface UserbmApi {
@@ -42,7 +42,10 @@ public interface UserbmApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to delete a userbm in the system with its id", nickname = "deleteUserbmById", notes = "", response = Boolean.class, tags={  })
+    @ApiOperation(value = "Path used to delete a userbm in the system with its id", nickname = "deleteUserbmById", notes = "", response = Boolean.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Userbm deleted successfully", response = Boolean.class),
         @ApiResponse(code = 400, message = "Bad request. User ID must be an integer and larger than 0."),
@@ -77,7 +80,10 @@ public interface UserbmApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Find a Userbm in the system by its cni number", nickname = "getUserbmByCni", notes = "", response = UserbmDto.class, tags={  })
+    @ApiOperation(value = "Find a Userbm in the system by its cni number", nickname = "getUserbmByCni", notes = "", response = UserbmDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Userbm found successfully", response = UserbmDto.class),
         @ApiResponse(code = 400, message = "Bad request. User cni number must be an string and not empty."),
@@ -121,7 +127,10 @@ public interface UserbmApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Find a Userbm in the system by its email address", nickname = "getUserbmByEmail", notes = "", response = UserbmDto.class, tags={  })
+    @ApiOperation(value = "Find a Userbm in the system by its email address", nickname = "getUserbmByEmail", notes = "", response = UserbmDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Userbm found successfully", response = UserbmDto.class),
         @ApiResponse(code = 400, message = "Bad request. User email address number must be an string and not empty."),
@@ -165,7 +174,10 @@ public interface UserbmApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Find a Userbm in the system by its id", nickname = "getUserbmById", notes = "", response = UserbmDto.class, tags={  })
+    @ApiOperation(value = "Find a Userbm in the system by its id", nickname = "getUserbmById", notes = "", response = UserbmDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Userbm found successfully", response = UserbmDto.class),
         @ApiResponse(code = 400, message = "Bad request. User ID must be an integer and larger than 0."),
@@ -209,7 +221,10 @@ public interface UserbmApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Find a Userbm in the system by its login", nickname = "getUserbmByLogin", notes = "", response = UserbmDto.class, tags={  })
+    @ApiOperation(value = "Find a Userbm in the system by its login", nickname = "getUserbmByLogin", notes = "", response = UserbmDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Userbm found successfully", response = UserbmDto.class),
         @ApiResponse(code = 400, message = "Bad request. User login must be an string and not empty."),
@@ -248,7 +263,10 @@ public interface UserbmApi {
      * @param filterRequest  (optional)
      * @return Userbm list found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list user that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getUserbmList", notes = "", response = UserbmDto.class, responseContainer = "List", tags={  })
+    @ApiOperation(value = "Path used to list user that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getUserbmList", notes = "", response = UserbmDto.class, responseContainer = "List", authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Userbm list found successfully", response = UserbmDto.class, responseContainer = "List") })
     @RequestMapping(
@@ -283,7 +301,10 @@ public interface UserbmApi {
      * @param filterRequest  (optional)
      * @return Userbm page found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list users page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getUserbmPage", notes = "", response = PageofUserbmDto.class, tags={  })
+    @ApiOperation(value = "Path used to list users page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getUserbmPage", notes = "", response = PageofUserbmDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Userbm page found successfully", response = PageofUserbmDto.class) })
     @RequestMapping(
@@ -323,7 +344,10 @@ public interface UserbmApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to save a new user in the system", nickname = "saveUserbm", notes = "", response = UserbmDto.class, tags={  })
+    @ApiOperation(value = "Path used to save a new user in the system", nickname = "saveUserbm", notes = "", response = UserbmDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Userbm saved successfully", response = UserbmDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),
@@ -368,7 +392,10 @@ public interface UserbmApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to update or modify an existing user in the system", nickname = "updateUserbm", notes = "", response = UserbmDto.class, tags={  })
+    @ApiOperation(value = "Path used to update or modify an existing user in the system", nickname = "updateUserbm", notes = "", response = UserbmDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Userbm updated successfully", response = UserbmDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),

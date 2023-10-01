@@ -1,4 +1,6 @@
 post:
+  security:
+    - BearerAuth: []
   summary: Path used to save a new Account in the system to manage packaging, cover and damage article
   operationId: saveAccount
   requestBody:

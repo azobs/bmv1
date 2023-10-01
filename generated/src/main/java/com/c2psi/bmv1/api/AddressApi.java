@@ -20,7 +20,7 @@ import javax.validation.constraints.*;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-28T04:24:19.978343600+01:00[Africa/Casablanca]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-30T16:03:01.698280900+01:00[Africa/Casablanca]")
 @Validated
 @Api(value = "address", description = "the address API")
 public interface AddressApi {
@@ -40,7 +40,10 @@ public interface AddressApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to delete an address in the system with its id", nickname = "deleteAddressById", notes = "", response = Boolean.class, tags={  })
+    @ApiOperation(value = "Path used to delete an address in the system with its id", nickname = "deleteAddressById", notes = "", response = Boolean.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Address deleted successfully", response = Boolean.class),
         @ApiResponse(code = 400, message = "Bad request. User ID must be an integer and larger than 0."),
@@ -75,7 +78,10 @@ public interface AddressApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Find a Address in the system by its email address", nickname = "getAddressByEmail", notes = "", response = AddressDto.class, tags={  })
+    @ApiOperation(value = "Find a Address in the system by its email address", nickname = "getAddressByEmail", notes = "", response = AddressDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Address found successfully", response = AddressDto.class),
         @ApiResponse(code = 400, message = "Bad request. Email address number must be an string and not empty."),
@@ -119,7 +125,10 @@ public interface AddressApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Find an Address in the system by its id", nickname = "getAddressById", notes = "", response = AddressDto.class, tags={  })
+    @ApiOperation(value = "Find an Address in the system by its id", nickname = "getAddressById", notes = "", response = AddressDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Address found successfully", response = AddressDto.class),
         @ApiResponse(code = 400, message = "Bad request. User ID must be an integer and larger than 0."),
@@ -163,7 +172,10 @@ public interface AddressApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to save a new address in the system", nickname = "saveAddress", notes = "", response = AddressDto.class, tags={  })
+    @ApiOperation(value = "Path used to save a new address in the system", nickname = "saveAddress", notes = "", response = AddressDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Address saved successfully", response = AddressDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),
@@ -208,7 +220,10 @@ public interface AddressApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to update or modify an existing address in the system", nickname = "updateAddress", notes = "", response = AddressDto.class, tags={  })
+    @ApiOperation(value = "Path used to update or modify an existing address in the system", nickname = "updateAddress", notes = "", response = AddressDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Address updated successfully", response = AddressDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),

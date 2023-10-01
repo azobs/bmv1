@@ -22,7 +22,7 @@ import javax.validation.constraints.*;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-28T04:24:19.978343600+01:00[Africa/Casablanca]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-30T16:03:01.698280900+01:00[Africa/Casablanca]")
 @Validated
 @Api(value = "format", description = "the format API")
 public interface FormatApi {
@@ -42,7 +42,10 @@ public interface FormatApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to delete a format in the system with its id", nickname = "deleteFormatById", notes = "", response = Boolean.class, tags={  })
+    @ApiOperation(value = "Path used to delete a format in the system with its id", nickname = "deleteFormatById", notes = "", response = Boolean.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Format deleted successfully", response = Boolean.class),
         @ApiResponse(code = 400, message = "Bad request. Format ID must be an integer and larger than 0."),
@@ -77,7 +80,10 @@ public interface FormatApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Find a Format in the system by its id", nickname = "getFormatById", notes = "", response = FormatDto.class, tags={  })
+    @ApiOperation(value = "Find a Format in the system by its id", nickname = "getFormatById", notes = "", response = FormatDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Format found successfully", response = FormatDto.class),
         @ApiResponse(code = 400, message = "Bad request. Format ID must be an integer and larger than 0."),
@@ -116,7 +122,10 @@ public interface FormatApi {
      * @param filterRequest  (optional)
      * @return Format list found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list format that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getFormatList", notes = "", response = FormatDto.class, responseContainer = "List", tags={  })
+    @ApiOperation(value = "Path used to list format that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getFormatList", notes = "", response = FormatDto.class, responseContainer = "List", authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Format list found successfully", response = FormatDto.class, responseContainer = "List") })
     @RequestMapping(
@@ -151,7 +160,10 @@ public interface FormatApi {
      * @param filterRequest  (optional)
      * @return Format page found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list format page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getFormatPage", notes = "", response = PageofFormatDto.class, tags={  })
+    @ApiOperation(value = "Path used to list format page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getFormatPage", notes = "", response = PageofFormatDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Format page found successfully", response = PageofFormatDto.class) })
     @RequestMapping(
@@ -191,7 +203,10 @@ public interface FormatApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to save a new format of product in the system", nickname = "saveFormat", notes = "", response = FormatDto.class, tags={  })
+    @ApiOperation(value = "Path used to save a new format of product in the system", nickname = "saveFormat", notes = "", response = FormatDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Format saved successfully", response = FormatDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),
@@ -236,7 +251,10 @@ public interface FormatApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to update or modify an existing format in the system", nickname = "updateFormat", notes = "", response = FormatDto.class, tags={  })
+    @ApiOperation(value = "Path used to update or modify an existing format in the system", nickname = "updateFormat", notes = "", response = FormatDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Format updated successfully", response = FormatDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),

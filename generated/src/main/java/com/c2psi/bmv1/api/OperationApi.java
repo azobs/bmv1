@@ -22,7 +22,7 @@ import javax.validation.constraints.*;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-28T04:24:19.978343600+01:00[Africa/Casablanca]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-30T16:03:01.698280900+01:00[Africa/Casablanca]")
 @Validated
 @Api(value = "operation", description = "the operation API")
 public interface OperationApi {
@@ -42,7 +42,10 @@ public interface OperationApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to delete an operation in the system with its id", nickname = "deleteOperationById", notes = "", response = Boolean.class, tags={  })
+    @ApiOperation(value = "Path used to delete an operation in the system with its id", nickname = "deleteOperationById", notes = "", response = Boolean.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Operation deleted successfully", response = Boolean.class),
         @ApiResponse(code = 400, message = "Bad request. Operation ID must be an integer and larger than 0."),
@@ -77,7 +80,10 @@ public interface OperationApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Find an Operation in the system by its id", nickname = "getOperationById", notes = "", response = OperationDto.class, tags={  })
+    @ApiOperation(value = "Find an Operation in the system by its id", nickname = "getOperationById", notes = "", response = OperationDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Operation found successfully", response = OperationDto.class),
         @ApiResponse(code = 400, message = "Bad request. Operation ID must be an integer and larger than 0."),
@@ -116,7 +122,10 @@ public interface OperationApi {
      * @param filterRequest  (optional)
      * @return Operation list found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list operation that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getOperationList", notes = "", response = OperationDto.class, responseContainer = "List", tags={  })
+    @ApiOperation(value = "Path used to list operation that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getOperationList", notes = "", response = OperationDto.class, responseContainer = "List", authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Operation list found successfully", response = OperationDto.class, responseContainer = "List") })
     @RequestMapping(
@@ -151,7 +160,10 @@ public interface OperationApi {
      * @param filterRequest  (optional)
      * @return Operation page found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list Operation page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getOperationPage", notes = "", response = PageofOperationDto.class, tags={  })
+    @ApiOperation(value = "Path used to list Operation page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getOperationPage", notes = "", response = PageofOperationDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Operation page found successfully", response = PageofOperationDto.class) })
     @RequestMapping(
@@ -191,7 +203,10 @@ public interface OperationApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to save a new Operation in the system to have history of all operations in the system", nickname = "saveOperation", notes = "", response = OperationDto.class, tags={  })
+    @ApiOperation(value = "Path used to save a new Operation in the system to have history of all operations in the system", nickname = "saveOperation", notes = "", response = OperationDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Operation saved successfully", response = OperationDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),
@@ -236,7 +251,10 @@ public interface OperationApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to update or modify an existing Operation in the system", nickname = "updateOperation", notes = "", response = OperationDto.class, tags={  })
+    @ApiOperation(value = "Path used to update or modify an existing Operation in the system", nickname = "updateOperation", notes = "", response = OperationDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Operation updated successfully", response = OperationDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),

@@ -24,7 +24,7 @@ import javax.validation.constraints.*;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-28T04:24:19.978343600+01:00[Africa/Casablanca]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-30T16:03:01.698280900+01:00[Africa/Casablanca]")
 @Validated
 @Api(value = "inventory", description = "the inventory API")
 public interface InventoryApi {
@@ -44,7 +44,10 @@ public interface InventoryApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to delete a inventory in the system with its id", nickname = "deleteInventoryById", notes = "", response = Boolean.class, tags={  })
+    @ApiOperation(value = "Path used to delete a inventory in the system with its id", nickname = "deleteInventoryById", notes = "", response = Boolean.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Inventory deleted successfully", response = Boolean.class),
         @ApiResponse(code = 400, message = "Bad request. Currency ID must be an integer and larger than 0."),
@@ -79,7 +82,10 @@ public interface InventoryApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to delete a inventoryline in the system with its id", nickname = "deleteInventorylineById", notes = "", response = Boolean.class, tags={  })
+    @ApiOperation(value = "Path used to delete a inventoryline in the system with its id", nickname = "deleteInventorylineById", notes = "", response = Boolean.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Inventoryline deleted successfully", response = Boolean.class),
         @ApiResponse(code = 400, message = "Bad request. Currency ID must be an integer and larger than 0."),
@@ -114,7 +120,10 @@ public interface InventoryApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Find a Inventory in the system by its id", nickname = "getInventoryById", notes = "", response = InventoryDto.class, tags={  })
+    @ApiOperation(value = "Find a Inventory in the system by its id", nickname = "getInventoryById", notes = "", response = InventoryDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Inventory found successfully", response = InventoryDto.class),
         @ApiResponse(code = 400, message = "Bad request. Inventory ID must be an integer and larger than 0."),
@@ -153,7 +162,10 @@ public interface InventoryApi {
      * @param filterRequest  (optional)
      * @return Inventory list found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list inventory that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getInventoryList", notes = "", response = InventoryDto.class, responseContainer = "List", tags={  })
+    @ApiOperation(value = "Path used to list inventory that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getInventoryList", notes = "", response = InventoryDto.class, responseContainer = "List", authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Inventory list found successfully", response = InventoryDto.class, responseContainer = "List") })
     @RequestMapping(
@@ -188,7 +200,10 @@ public interface InventoryApi {
      * @param filterRequest  (optional)
      * @return Inventory page found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list Inventory page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getInventoryPage", notes = "", response = PageofInventoryDto.class, tags={  })
+    @ApiOperation(value = "Path used to list Inventory page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getInventoryPage", notes = "", response = PageofInventoryDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Inventory page found successfully", response = PageofInventoryDto.class) })
     @RequestMapping(
@@ -228,7 +243,10 @@ public interface InventoryApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Find a Inventoryline in the system by its id", nickname = "getInventorylineById", notes = "", response = InventorylineDto.class, tags={  })
+    @ApiOperation(value = "Find a Inventoryline in the system by its id", nickname = "getInventorylineById", notes = "", response = InventorylineDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Inventoryline found successfully", response = InventorylineDto.class),
         @ApiResponse(code = 400, message = "Bad request. Inventory ID must be an integer and larger than 0."),
@@ -267,7 +285,10 @@ public interface InventoryApi {
      * @param filterRequest  (optional)
      * @return Inventoryline list found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list inventoryline that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getInventorylineList", notes = "", response = InventorylineDto.class, responseContainer = "List", tags={  })
+    @ApiOperation(value = "Path used to list inventoryline that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getInventorylineList", notes = "", response = InventorylineDto.class, responseContainer = "List", authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Inventoryline list found successfully", response = InventorylineDto.class, responseContainer = "List") })
     @RequestMapping(
@@ -302,7 +323,10 @@ public interface InventoryApi {
      * @param filterRequest  (optional)
      * @return Inventoryline page found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list Inventoryline page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getInventorylinePage", notes = "", response = PageofInventorylineDto.class, tags={  })
+    @ApiOperation(value = "Path used to list Inventoryline page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getInventorylinePage", notes = "", response = PageofInventorylineDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Inventoryline page found successfully", response = PageofInventorylineDto.class) })
     @RequestMapping(
@@ -342,7 +366,10 @@ public interface InventoryApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to save a new Inventory in the system", nickname = "saveInventory", notes = "", response = InventoryDto.class, tags={  })
+    @ApiOperation(value = "Path used to save a new Inventory in the system", nickname = "saveInventory", notes = "", response = InventoryDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Inventory saved successfully", response = InventoryDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),
@@ -387,7 +414,10 @@ public interface InventoryApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to save a new Inventoryline in the system", nickname = "saveInventoryline", notes = "", response = InventorylineDto.class, tags={  })
+    @ApiOperation(value = "Path used to save a new Inventoryline in the system", nickname = "saveInventoryline", notes = "", response = InventorylineDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Inventoryline saved successfully", response = InventorylineDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),
@@ -432,7 +462,10 @@ public interface InventoryApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to update or modify an existing inventory in the system", nickname = "updateInventory", notes = "", response = InventoryDto.class, tags={  })
+    @ApiOperation(value = "Path used to update or modify an existing inventory in the system", nickname = "updateInventory", notes = "", response = InventoryDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Inventory updated successfully", response = InventoryDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),
@@ -477,7 +510,10 @@ public interface InventoryApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to update or modify an existing inventoryline in the system", nickname = "updateInventoryline", notes = "", response = InventorylineDto.class, tags={  })
+    @ApiOperation(value = "Path used to update or modify an existing inventoryline in the system", nickname = "updateInventoryline", notes = "", response = InventorylineDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Inventoryline updated successfully", response = InventorylineDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),

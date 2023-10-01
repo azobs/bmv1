@@ -22,7 +22,7 @@ import javax.validation.constraints.*;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-28T04:24:19.978343600+01:00[Africa/Casablanca]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-30T16:03:01.698280900+01:00[Africa/Casablanca]")
 @Validated
 @Api(value = "command", description = "the command API")
 public interface CommandApi {
@@ -42,7 +42,10 @@ public interface CommandApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to delete a command in the system with its id", nickname = "deleteCommandById", notes = "", response = Boolean.class, tags={  })
+    @ApiOperation(value = "Path used to delete a command in the system with its id", nickname = "deleteCommandById", notes = "", response = Boolean.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Command deleted successfully", response = Boolean.class),
         @ApiResponse(code = 400, message = "Bad request. Arrival ID must be an integer and larger than 0."),
@@ -77,7 +80,10 @@ public interface CommandApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Find a Command in the system by its id", nickname = "getCommandById", notes = "", response = CommandDto.class, tags={  })
+    @ApiOperation(value = "Find a Command in the system by its id", nickname = "getCommandById", notes = "", response = CommandDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Command found successfully", response = CommandDto.class),
         @ApiResponse(code = 400, message = "Bad request. Command ID must be an integer and larger than 0."),
@@ -116,7 +122,10 @@ public interface CommandApi {
      * @param filterRequest  (optional)
      * @return Command list found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list command that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getCommandList", notes = "", response = CommandDto.class, responseContainer = "List", tags={  })
+    @ApiOperation(value = "Path used to list command that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getCommandList", notes = "", response = CommandDto.class, responseContainer = "List", authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Command list found successfully", response = CommandDto.class, responseContainer = "List") })
     @RequestMapping(
@@ -151,7 +160,10 @@ public interface CommandApi {
      * @param filterRequest  (optional)
      * @return Command page found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list Command page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getCommandPage", notes = "", response = PageofCommandDto.class, tags={  })
+    @ApiOperation(value = "Path used to list Command page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getCommandPage", notes = "", response = PageofCommandDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Command page found successfully", response = PageofCommandDto.class) })
     @RequestMapping(
@@ -191,7 +203,10 @@ public interface CommandApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to save a new Command in the system", nickname = "saveCommand", notes = "", response = CommandDto.class, tags={  })
+    @ApiOperation(value = "Path used to save a new Command in the system", nickname = "saveCommand", notes = "", response = CommandDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Command saved successfully", response = CommandDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),
@@ -236,7 +251,10 @@ public interface CommandApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to update or modify an existing Command in the system", nickname = "updateCommand", notes = "", response = CommandDto.class, tags={  })
+    @ApiOperation(value = "Path used to update or modify an existing Command in the system", nickname = "updateCommand", notes = "", response = CommandDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Command updated successfully", response = CommandDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),

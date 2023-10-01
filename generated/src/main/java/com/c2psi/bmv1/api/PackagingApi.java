@@ -22,7 +22,7 @@ import javax.validation.constraints.*;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-28T04:24:19.978343600+01:00[Africa/Casablanca]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-30T16:03:01.698280900+01:00[Africa/Casablanca]")
 @Validated
 @Api(value = "packaging", description = "the packaging API")
 public interface PackagingApi {
@@ -42,7 +42,10 @@ public interface PackagingApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to delete a packaging in the system with its id", nickname = "deletePackagingById", notes = "", response = Boolean.class, tags={  })
+    @ApiOperation(value = "Path used to delete a packaging in the system with its id", nickname = "deletePackagingById", notes = "", response = Boolean.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Packaging deleted successfully", response = Boolean.class),
         @ApiResponse(code = 400, message = "Bad request. Packaging ID must be an integer and larger than 0."),
@@ -77,7 +80,10 @@ public interface PackagingApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Find a Packaging in the system by its id", nickname = "getPackagingById", notes = "", response = PackagingDto.class, tags={  })
+    @ApiOperation(value = "Find a Packaging in the system by its id", nickname = "getPackagingById", notes = "", response = PackagingDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Packaging found successfully", response = PackagingDto.class),
         @ApiResponse(code = 400, message = "Bad request. Packaging ID must be an integer and larger than 0."),
@@ -116,7 +122,10 @@ public interface PackagingApi {
      * @param filterRequest  (optional)
      * @return Packaging list found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list packaging that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getPackagingList", notes = "", response = PackagingDto.class, responseContainer = "List", tags={  })
+    @ApiOperation(value = "Path used to list packaging that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getPackagingList", notes = "", response = PackagingDto.class, responseContainer = "List", authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Packaging list found successfully", response = PackagingDto.class, responseContainer = "List") })
     @RequestMapping(
@@ -151,7 +160,10 @@ public interface PackagingApi {
      * @param filterRequest  (optional)
      * @return Packaging page found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list packaging page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getPackagingPage", notes = "", response = PageofPackagingDto.class, tags={  })
+    @ApiOperation(value = "Path used to list packaging page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getPackagingPage", notes = "", response = PageofPackagingDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Packaging page found successfully", response = PageofPackagingDto.class) })
     @RequestMapping(
@@ -191,7 +203,10 @@ public interface PackagingApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to save a new Packaging in the system", nickname = "savePackaging", notes = "", response = PackagingDto.class, tags={  })
+    @ApiOperation(value = "Path used to save a new Packaging in the system", nickname = "savePackaging", notes = "", response = PackagingDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Packaging saved successfully", response = PackagingDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),
@@ -236,7 +251,10 @@ public interface PackagingApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to update or modify an existing Packaging in the system", nickname = "updatePackaging", notes = "", response = PackagingDto.class, tags={  })
+    @ApiOperation(value = "Path used to update or modify an existing Packaging in the system", nickname = "updatePackaging", notes = "", response = PackagingDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Packaging updated successfully", response = PackagingDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),

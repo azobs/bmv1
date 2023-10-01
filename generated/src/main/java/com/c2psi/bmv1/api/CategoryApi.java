@@ -22,7 +22,7 @@ import javax.validation.constraints.*;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-28T04:24:19.978343600+01:00[Africa/Casablanca]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-30T16:03:01.698280900+01:00[Africa/Casablanca]")
 @Validated
 @Api(value = "category", description = "the category API")
 public interface CategoryApi {
@@ -42,7 +42,10 @@ public interface CategoryApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to delete a category in the system with its id", nickname = "deleteCategoryById", notes = "", response = Boolean.class, tags={  })
+    @ApiOperation(value = "Path used to delete a category in the system with its id", nickname = "deleteCategoryById", notes = "", response = Boolean.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Category deleted successfully", response = Boolean.class),
         @ApiResponse(code = 400, message = "Bad request. Category ID must be an integer and larger than 0."),
@@ -77,7 +80,10 @@ public interface CategoryApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Find a Category in the system by its id", nickname = "getCategoryById", notes = "", response = CategoryDto.class, tags={  })
+    @ApiOperation(value = "Find a Category in the system by its id", nickname = "getCategoryById", notes = "", response = CategoryDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Category found successfully", response = CategoryDto.class),
         @ApiResponse(code = 400, message = "Bad request. Category ID must be an integer and larger than 0."),
@@ -116,7 +122,10 @@ public interface CategoryApi {
      * @param filterRequest  (optional)
      * @return Category list found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list category that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getCategoryList", notes = "", response = CategoryDto.class, responseContainer = "List", tags={  })
+    @ApiOperation(value = "Path used to list category that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getCategoryList", notes = "", response = CategoryDto.class, responseContainer = "List", authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Category list found successfully", response = CategoryDto.class, responseContainer = "List") })
     @RequestMapping(
@@ -151,7 +160,10 @@ public interface CategoryApi {
      * @param filterRequest  (optional)
      * @return Category page found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list category page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getCategoryPage", notes = "", response = PageofCategoryDto.class, tags={  })
+    @ApiOperation(value = "Path used to list category page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getCategoryPage", notes = "", response = PageofCategoryDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Category page found successfully", response = PageofCategoryDto.class) })
     @RequestMapping(
@@ -191,7 +203,10 @@ public interface CategoryApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to save a new category of product in the system", nickname = "saveCategory", notes = "", response = CategoryDto.class, tags={  })
+    @ApiOperation(value = "Path used to save a new category of product in the system", nickname = "saveCategory", notes = "", response = CategoryDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Category saved successfully", response = CategoryDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),
@@ -236,7 +251,10 @@ public interface CategoryApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to update or modify an existing category in the system", nickname = "updateCategory", notes = "", response = CategoryDto.class, tags={  })
+    @ApiOperation(value = "Path used to update or modify an existing category in the system", nickname = "updateCategory", notes = "", response = CategoryDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Category updated successfully", response = CategoryDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),

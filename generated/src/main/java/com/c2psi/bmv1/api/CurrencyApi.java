@@ -24,7 +24,7 @@ import javax.validation.constraints.*;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-28T04:24:19.978343600+01:00[Africa/Casablanca]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-30T16:03:01.698280900+01:00[Africa/Casablanca]")
 @Validated
 @Api(value = "currency", description = "the currency API")
 public interface CurrencyApi {
@@ -44,7 +44,10 @@ public interface CurrencyApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to delete a currency in the system with its id", nickname = "deleteCurrencyById", notes = "", response = Boolean.class, tags={  })
+    @ApiOperation(value = "Path used to delete a currency in the system with its id", nickname = "deleteCurrencyById", notes = "", response = Boolean.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Currency deleted successfully", response = Boolean.class),
         @ApiResponse(code = 400, message = "Bad request. Currency ID must be an integer and larger than 0."),
@@ -79,7 +82,10 @@ public interface CurrencyApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to delete a currency conversion in the system with its id", nickname = "deleteCurrencyconversionById", notes = "", response = Boolean.class, tags={  })
+    @ApiOperation(value = "Path used to delete a currency conversion in the system with its id", nickname = "deleteCurrencyconversionById", notes = "", response = Boolean.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Currencyconversion deleted successfully", response = Boolean.class),
         @ApiResponse(code = 400, message = "Bad request. Unitconversion ID must be an integer and larger than 0."),
@@ -114,7 +120,10 @@ public interface CurrencyApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Find a Currency in the system by its id", nickname = "getCurrencyById", notes = "", response = CurrencyDto.class, tags={  })
+    @ApiOperation(value = "Find a Currency in the system by its id", nickname = "getCurrencyById", notes = "", response = CurrencyDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Currency found successfully", response = CurrencyDto.class),
         @ApiResponse(code = 400, message = "Bad request. Currency ID must be an integer and larger than 0."),
@@ -153,7 +162,10 @@ public interface CurrencyApi {
      * @param filterRequest  (optional)
      * @return Currency list found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list currency that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getCurrencyList", notes = "", response = CurrencyDto.class, responseContainer = "List", tags={  })
+    @ApiOperation(value = "Path used to list currency that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getCurrencyList", notes = "", response = CurrencyDto.class, responseContainer = "List", authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Currency list found successfully", response = CurrencyDto.class, responseContainer = "List") })
     @RequestMapping(
@@ -188,7 +200,10 @@ public interface CurrencyApi {
      * @param filterRequest  (optional)
      * @return Currency page found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list currency page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getCurrencyPage", notes = "", response = PageofCurrencyDto.class, tags={  })
+    @ApiOperation(value = "Path used to list currency page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getCurrencyPage", notes = "", response = PageofCurrencyDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Currency page found successfully", response = PageofCurrencyDto.class) })
     @RequestMapping(
@@ -228,7 +243,10 @@ public interface CurrencyApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Find a Currencyconversion in the system by its id", nickname = "getCurrencyconversionById", notes = "", response = CurrencyconversionDto.class, tags={  })
+    @ApiOperation(value = "Find a Currencyconversion in the system by its id", nickname = "getCurrencyconversionById", notes = "", response = CurrencyconversionDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Currencyconversion found successfully", response = CurrencyconversionDto.class),
         @ApiResponse(code = 400, message = "Bad request. Currencyconversion ID must be an integer and larger than 0."),
@@ -267,7 +285,10 @@ public interface CurrencyApi {
      * @param filterRequest  (optional)
      * @return Currencyconversion list found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list currencyconversion that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getCurrencyconversionList", notes = "", response = CurrencyconversionDto.class, responseContainer = "List", tags={  })
+    @ApiOperation(value = "Path used to list currencyconversion that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getCurrencyconversionList", notes = "", response = CurrencyconversionDto.class, responseContainer = "List", authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Currencyconversion list found successfully", response = CurrencyconversionDto.class, responseContainer = "List") })
     @RequestMapping(
@@ -302,7 +323,10 @@ public interface CurrencyApi {
      * @param filterRequest  (optional)
      * @return Currencyconversion page found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list currencyconversion page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getCurrencyconversionPage", notes = "", response = PageofCurrencyconversionDto.class, tags={  })
+    @ApiOperation(value = "Path used to list currencyconversion page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getCurrencyconversionPage", notes = "", response = PageofCurrencyconversionDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Currencyconversion page found successfully", response = PageofCurrencyconversionDto.class) })
     @RequestMapping(
@@ -342,7 +366,10 @@ public interface CurrencyApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to save a new Currency of product in the system", nickname = "saveCurrency", notes = "", response = CurrencyDto.class, tags={  })
+    @ApiOperation(value = "Path used to save a new Currency of product in the system", nickname = "saveCurrency", notes = "", response = CurrencyDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Currency saved successfully", response = CurrencyDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),
@@ -387,7 +414,10 @@ public interface CurrencyApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to save a new Currencyconversion of product in the system", nickname = "saveCurrencyconversion", notes = "", response = CurrencyconversionDto.class, tags={  })
+    @ApiOperation(value = "Path used to save a new Currencyconversion of product in the system", nickname = "saveCurrencyconversion", notes = "", response = CurrencyconversionDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Currencyconversion saved successfully", response = CurrencyconversionDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),
@@ -432,7 +462,10 @@ public interface CurrencyApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to update or modify an existing currency in the system", nickname = "updateCurrency", notes = "", response = CurrencyDto.class, tags={  })
+    @ApiOperation(value = "Path used to update or modify an existing currency in the system", nickname = "updateCurrency", notes = "", response = CurrencyDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Currency updated successfully", response = CurrencyDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),
@@ -477,7 +510,10 @@ public interface CurrencyApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to update or modify an existing currencyconversion in the system", nickname = "updateCurrencyconversion", notes = "", response = CurrencyconversionDto.class, tags={  })
+    @ApiOperation(value = "Path used to update or modify an existing currencyconversion in the system", nickname = "updateCurrencyconversion", notes = "", response = CurrencyconversionDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Currencyconversion updated successfully", response = CurrencyconversionDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),

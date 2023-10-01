@@ -26,7 +26,7 @@ import javax.validation.constraints.*;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-28T04:24:19.978343600+01:00[Africa/Casablanca]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-30T16:03:01.698280900+01:00[Africa/Casablanca]")
 @Validated
 @Api(value = "account", description = "the account API")
 public interface AccountApi {
@@ -46,7 +46,10 @@ public interface AccountApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to delete an account in the system with its id", nickname = "deleteAccountById", notes = "", response = Boolean.class, tags={  })
+    @ApiOperation(value = "Path used to delete an account in the system with its id", nickname = "deleteAccountById", notes = "", response = Boolean.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Account deleted successfully", response = Boolean.class),
         @ApiResponse(code = 400, message = "Bad request. Account ID must be an integer and larger than 0."),
@@ -81,7 +84,10 @@ public interface AccountApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to delete an account operation in the system with its id", nickname = "deleteAccountOperationById", notes = "", response = Boolean.class, tags={  })
+    @ApiOperation(value = "Path used to delete an account operation in the system with its id", nickname = "deleteAccountOperationById", notes = "", response = Boolean.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "AccountOperation deleted successfully", response = Boolean.class),
         @ApiResponse(code = 400, message = "Bad request. Operation ID must be an integer and larger than 0."),
@@ -116,7 +122,10 @@ public interface AccountApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to delete an cash operation in the system with its id", nickname = "deleteCashOperationById", notes = "", response = Boolean.class, tags={  })
+    @ApiOperation(value = "Path used to delete an cash operation in the system with its id", nickname = "deleteCashOperationById", notes = "", response = Boolean.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "CashOperation deleted successfully", response = Boolean.class),
         @ApiResponse(code = 400, message = "Bad request. Operation ID must be an integer and larger than 0."),
@@ -151,7 +160,10 @@ public interface AccountApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Find an Account in the system by its id", nickname = "getAccountById", notes = "", response = AccountDto.class, tags={  })
+    @ApiOperation(value = "Find an Account in the system by its id", nickname = "getAccountById", notes = "", response = AccountDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Account found successfully", response = AccountDto.class),
         @ApiResponse(code = 400, message = "Bad request. Account ID must be an integer and larger than 0."),
@@ -190,7 +202,10 @@ public interface AccountApi {
      * @param filterRequest  (optional)
      * @return Account list found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list account that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getAccountList", notes = "", response = AccountDto.class, responseContainer = "List", tags={  })
+    @ApiOperation(value = "Path used to list account that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getAccountList", notes = "", response = AccountDto.class, responseContainer = "List", authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Account list found successfully", response = AccountDto.class, responseContainer = "List") })
     @RequestMapping(
@@ -230,7 +245,10 @@ public interface AccountApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Find an AccountOperation in the system by its id", nickname = "getAccountOperationById", notes = "", response = AccountOperationDto.class, tags={  })
+    @ApiOperation(value = "Find an AccountOperation in the system by its id", nickname = "getAccountOperationById", notes = "", response = AccountOperationDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "AccountOperation found successfully", response = AccountOperationDto.class),
         @ApiResponse(code = 400, message = "Bad request. Operation ID must be an integer and larger than 0."),
@@ -269,7 +287,10 @@ public interface AccountApi {
      * @param filterRequest  (optional)
      * @return AccountOperation list found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list accountoperation that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getAccountOperationList", notes = "", response = AccountOperationDto.class, responseContainer = "List", tags={  })
+    @ApiOperation(value = "Path used to list accountoperation that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getAccountOperationList", notes = "", response = AccountOperationDto.class, responseContainer = "List", authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "AccountOperation list found successfully", response = AccountOperationDto.class, responseContainer = "List") })
     @RequestMapping(
@@ -304,7 +325,10 @@ public interface AccountApi {
      * @param filterRequest  (optional)
      * @return AccountOperation page found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list AccountOperation page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getAccountOperationPage", notes = "", response = PageofAccountOperationDto.class, tags={  })
+    @ApiOperation(value = "Path used to list AccountOperation page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getAccountOperationPage", notes = "", response = PageofAccountOperationDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "AccountOperation page found successfully", response = PageofAccountOperationDto.class) })
     @RequestMapping(
@@ -339,7 +363,10 @@ public interface AccountApi {
      * @param filterRequest  (optional)
      * @return Account page found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list Account page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getAccountPage", notes = "", response = PageofAccountDto.class, tags={  })
+    @ApiOperation(value = "Path used to list Account page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getAccountPage", notes = "", response = PageofAccountDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Account page found successfully", response = PageofAccountDto.class) })
     @RequestMapping(
@@ -379,7 +406,10 @@ public interface AccountApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Find an CashOperation in the system by its id", nickname = "getCashOperationById", notes = "", response = CashOperationDto.class, tags={  })
+    @ApiOperation(value = "Find an CashOperation in the system by its id", nickname = "getCashOperationById", notes = "", response = CashOperationDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "CashOperation found successfully", response = CashOperationDto.class),
         @ApiResponse(code = 400, message = "Bad request. Operation ID must be an integer and larger than 0."),
@@ -418,7 +448,10 @@ public interface AccountApi {
      * @param filterRequest  (optional)
      * @return CashOperation list found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list cashoperation that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getCashOperationList", notes = "", response = CashOperationDto.class, responseContainer = "List", tags={  })
+    @ApiOperation(value = "Path used to list cashoperation that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getCashOperationList", notes = "", response = CashOperationDto.class, responseContainer = "List", authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "CashOperation list found successfully", response = CashOperationDto.class, responseContainer = "List") })
     @RequestMapping(
@@ -453,7 +486,10 @@ public interface AccountApi {
      * @param filterRequest  (optional)
      * @return CashOperation page found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list CashOperation page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getCashOperationPage", notes = "", response = PageofCashOperationDto.class, tags={  })
+    @ApiOperation(value = "Path used to list CashOperation page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getCashOperationPage", notes = "", response = PageofCashOperationDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "CashOperation page found successfully", response = PageofCashOperationDto.class) })
     @RequestMapping(
@@ -493,7 +529,10 @@ public interface AccountApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to save a new Account in the system to manage packaging, cover and damage article", nickname = "saveAccount", notes = "", response = AccountDto.class, tags={  })
+    @ApiOperation(value = "Path used to save a new Account in the system to manage packaging, cover and damage article", nickname = "saveAccount", notes = "", response = AccountDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Account saved successfully", response = AccountDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),
@@ -538,7 +577,10 @@ public interface AccountApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to save a new AccountOperation in the system to have history of all operations in the system", nickname = "saveAccountOperation", notes = "", response = AccountOperationDto.class, tags={  })
+    @ApiOperation(value = "Path used to save a new AccountOperation in the system to have history of all operations in the system", nickname = "saveAccountOperation", notes = "", response = AccountOperationDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "AccountOperation saved successfully", response = AccountOperationDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),
@@ -583,7 +625,10 @@ public interface AccountApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to save a new CashOperation in the system to have history of all cash operations in the system", nickname = "saveCashOperation", notes = "", response = CashOperationDto.class, tags={  })
+    @ApiOperation(value = "Path used to save a new CashOperation in the system to have history of all cash operations in the system", nickname = "saveCashOperation", notes = "", response = CashOperationDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "CashOperation saved successfully", response = CashOperationDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),
@@ -628,7 +673,10 @@ public interface AccountApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to update or modify an existing Account in the system", nickname = "updateAccount", notes = "", response = AccountDto.class, tags={  })
+    @ApiOperation(value = "Path used to update or modify an existing Account in the system", nickname = "updateAccount", notes = "", response = AccountDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Account updated successfully", response = AccountDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),
@@ -673,7 +721,10 @@ public interface AccountApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to update or modify an existing AccountOperation in the system", nickname = "updateAccountOperation", notes = "", response = AccountOperationDto.class, tags={  })
+    @ApiOperation(value = "Path used to update or modify an existing AccountOperation in the system", nickname = "updateAccountOperation", notes = "", response = AccountOperationDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "AccountOperation updated successfully", response = AccountOperationDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),
@@ -718,7 +769,10 @@ public interface AccountApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to update or modify an existing CashOperation in the system", nickname = "updateCashOperation", notes = "", response = CashOperationDto.class, tags={  })
+    @ApiOperation(value = "Path used to update or modify an existing CashOperation in the system", nickname = "updateCashOperation", notes = "", response = CashOperationDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "CashOperation updated successfully", response = CashOperationDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),

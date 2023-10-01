@@ -25,7 +25,7 @@ import javax.validation.constraints.*;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-28T04:24:19.978343600+01:00[Africa/Casablanca]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-30T16:03:01.698280900+01:00[Africa/Casablanca]")
 @Validated
 @Api(value = "auth", description = "the auth API")
 public interface AuthApi {
@@ -45,7 +45,10 @@ public interface AuthApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to authenticate a user in the system", nickname = "authenticate", notes = "", response = AuthResponse.class, tags={  })
+    @ApiOperation(value = "Path used to authenticate a user in the system", nickname = "authenticate", notes = "", response = AuthResponse.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Userbm authenticated successfully", response = AuthResponse.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),
@@ -90,7 +93,10 @@ public interface AuthApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to delete a permission in the system with its id", nickname = "deletePermissionById", notes = "", response = Boolean.class, tags={  })
+    @ApiOperation(value = "Path used to delete a permission in the system with its id", nickname = "deletePermissionById", notes = "", response = Boolean.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Permission deleted successfully", response = Boolean.class),
         @ApiResponse(code = 400, message = "Bad request. User ID must be an integer and larger than 0."),
@@ -125,7 +131,10 @@ public interface AuthApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to delete a token in the system with its id", nickname = "deleteTokenById", notes = "", response = Boolean.class, tags={  })
+    @ApiOperation(value = "Path used to delete a token in the system with its id", nickname = "deleteTokenById", notes = "", response = Boolean.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Token deleted successfully", response = Boolean.class),
         @ApiResponse(code = 400, message = "Bad request. Token ID must be an integer and larger than 0."),
@@ -160,7 +169,10 @@ public interface AuthApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Find a Permission in the system by its id", nickname = "getPermissionById", notes = "", response = PermissionDto.class, tags={  })
+    @ApiOperation(value = "Find a Permission in the system by its id", nickname = "getPermissionById", notes = "", response = PermissionDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Permission found successfully", response = PermissionDto.class),
         @ApiResponse(code = 400, message = "Bad request. Permission ID must be an integer and larger than 0."),
@@ -204,7 +216,10 @@ public interface AuthApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Find a Permission in the system by its email address", nickname = "getPermissionByName", notes = "", response = PermissionDto.class, tags={  })
+    @ApiOperation(value = "Find a Permission in the system by its email address", nickname = "getPermissionByName", notes = "", response = PermissionDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Permission found successfully", response = PermissionDto.class),
         @ApiResponse(code = 400, message = "Bad request. Permission name must be an string and not empty."),
@@ -248,7 +263,10 @@ public interface AuthApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Find a Permission in the system by its email address", nickname = "getPermissionByTokenvalue", notes = "", response = TokenDto.class, tags={  })
+    @ApiOperation(value = "Find a Permission in the system by its email address", nickname = "getPermissionByTokenvalue", notes = "", response = TokenDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Token found successfully", response = TokenDto.class),
         @ApiResponse(code = 400, message = "Bad request. Token name must be an string and not empty."),
@@ -287,7 +305,10 @@ public interface AuthApi {
      * @param filterRequest  (optional)
      * @return Permission list found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list permission that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getPermissionList", notes = "", response = PermissionDto.class, responseContainer = "List", tags={  })
+    @ApiOperation(value = "Path used to list permission that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getPermissionList", notes = "", response = PermissionDto.class, responseContainer = "List", authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Permission list found successfully", response = PermissionDto.class, responseContainer = "List") })
     @RequestMapping(
@@ -322,7 +343,10 @@ public interface AuthApi {
      * @param filterRequest  (optional)
      * @return Permission page found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list permission page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getPermissionPage", notes = "", response = PageofPermissionDto.class, tags={  })
+    @ApiOperation(value = "Path used to list permission page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getPermissionPage", notes = "", response = PageofPermissionDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Permission page found successfully", response = PageofPermissionDto.class) })
     @RequestMapping(
@@ -362,7 +386,10 @@ public interface AuthApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Find a token in the system by its id", nickname = "getTokenById", notes = "", response = TokenDto.class, tags={  })
+    @ApiOperation(value = "Find a token in the system by its id", nickname = "getTokenById", notes = "", response = TokenDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Token found successfully", response = TokenDto.class),
         @ApiResponse(code = 400, message = "Bad request. Token ID must be an integer and larger than 0."),
@@ -401,7 +428,10 @@ public interface AuthApi {
      * @param filterRequest  (optional)
      * @return Token list found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list token that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getTokenList", notes = "", response = TokenDto.class, responseContainer = "List", tags={  })
+    @ApiOperation(value = "Path used to list token that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getTokenList", notes = "", response = TokenDto.class, responseContainer = "List", authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Token list found successfully", response = TokenDto.class, responseContainer = "List") })
     @RequestMapping(
@@ -441,7 +471,10 @@ public interface AuthApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to save a new permission associate to a role in the system", nickname = "savePermission", notes = "", response = PermissionDto.class, tags={  })
+    @ApiOperation(value = "Path used to save a new permission associate to a role in the system", nickname = "savePermission", notes = "", response = PermissionDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Permission saved successfully", response = PermissionDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),
@@ -486,7 +519,10 @@ public interface AuthApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to save a new connexion token in the system", nickname = "saveToken", notes = "", response = TokenDto.class, tags={  })
+    @ApiOperation(value = "Path used to save a new connexion token in the system", nickname = "saveToken", notes = "", response = TokenDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Permission saved successfully", response = TokenDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),

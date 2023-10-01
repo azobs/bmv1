@@ -22,7 +22,7 @@ import javax.validation.constraints.*;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-28T04:24:19.978343600+01:00[Africa/Casablanca]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-30T16:03:01.698280900+01:00[Africa/Casablanca]")
 @Validated
 @Api(value = "clientspecialprice", description = "the clientspecialprice API")
 public interface ClientspecialpriceApi {
@@ -42,7 +42,10 @@ public interface ClientspecialpriceApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to delete a clientspecialprice in the system with its id", nickname = "deleteClientSpecialpriceById", notes = "", response = Boolean.class, tags={  })
+    @ApiOperation(value = "Path used to delete a clientspecialprice in the system with its id", nickname = "deleteClientSpecialpriceById", notes = "", response = Boolean.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "ClientSpecialprice deleted successfully", response = Boolean.class),
         @ApiResponse(code = 400, message = "Bad request. Loading ID must be an integer and larger than 0."),
@@ -77,7 +80,10 @@ public interface ClientspecialpriceApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Find a ClientSpecialprice in the system by its id", nickname = "getClientSpecialpriceById", notes = "", response = ClientSpecialpriceDto.class, tags={  })
+    @ApiOperation(value = "Find a ClientSpecialprice in the system by its id", nickname = "getClientSpecialpriceById", notes = "", response = ClientSpecialpriceDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "ClientSpecialprice found successfully", response = ClientSpecialpriceDto.class),
         @ApiResponse(code = 400, message = "Bad request. ClientSpecialprice ID must be an integer and larger than 0."),
@@ -116,7 +122,10 @@ public interface ClientspecialpriceApi {
      * @param filterRequest  (optional)
      * @return ClientSpecialprice list found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list clientspecialprice that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getClientSpecialpriceList", notes = "", response = ClientSpecialpriceDto.class, responseContainer = "List", tags={  })
+    @ApiOperation(value = "Path used to list clientspecialprice that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getClientSpecialpriceList", notes = "", response = ClientSpecialpriceDto.class, responseContainer = "List", authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "ClientSpecialprice list found successfully", response = ClientSpecialpriceDto.class, responseContainer = "List") })
     @RequestMapping(
@@ -151,7 +160,10 @@ public interface ClientspecialpriceApi {
      * @param filterRequest  (optional)
      * @return ClientSpecialprice page found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list clientspecialprice page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getClientSpecialpricePage", notes = "", response = PageofClientSpecialpriceDto.class, tags={  })
+    @ApiOperation(value = "Path used to list clientspecialprice page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getClientSpecialpricePage", notes = "", response = PageofClientSpecialpriceDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "ClientSpecialprice page found successfully", response = PageofClientSpecialpriceDto.class) })
     @RequestMapping(
@@ -191,7 +203,10 @@ public interface ClientspecialpriceApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to save a new ClientSpecialprice in the system", nickname = "saveClientSpecialprice", notes = "", response = ClientSpecialpriceDto.class, tags={  })
+    @ApiOperation(value = "Path used to save a new ClientSpecialprice in the system", nickname = "saveClientSpecialprice", notes = "", response = ClientSpecialpriceDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "ClientSpecialprice saved successfully", response = ClientSpecialpriceDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),
@@ -236,7 +251,10 @@ public interface ClientspecialpriceApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to update or modify an existing ClientSpecialprice in the system", nickname = "updateClientSpecialprice", notes = "", response = ClientSpecialpriceDto.class, tags={  })
+    @ApiOperation(value = "Path used to update or modify an existing ClientSpecialprice in the system", nickname = "updateClientSpecialprice", notes = "", response = ClientSpecialpriceDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "ClientSpecialprice updated successfully", response = ClientSpecialpriceDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),

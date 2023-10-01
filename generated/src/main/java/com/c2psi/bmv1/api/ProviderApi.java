@@ -22,7 +22,7 @@ import javax.validation.constraints.*;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-28T04:24:19.978343600+01:00[Africa/Casablanca]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-30T16:03:01.698280900+01:00[Africa/Casablanca]")
 @Validated
 @Api(value = "provider", description = "the provider API")
 public interface ProviderApi {
@@ -42,7 +42,10 @@ public interface ProviderApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to delete a provider in the system with its id", nickname = "deleteProviderById", notes = "", response = Boolean.class, tags={  })
+    @ApiOperation(value = "Path used to delete a provider in the system with its id", nickname = "deleteProviderById", notes = "", response = Boolean.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Provider deleted successfully", response = Boolean.class),
         @ApiResponse(code = 400, message = "Bad request. Loading ID must be an integer and larger than 0."),
@@ -77,7 +80,10 @@ public interface ProviderApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Find a Provider in the system by its id", nickname = "getProviderById", notes = "", response = ProviderDto.class, tags={  })
+    @ApiOperation(value = "Find a Provider in the system by its id", nickname = "getProviderById", notes = "", response = ProviderDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Provider found successfully", response = ProviderDto.class),
         @ApiResponse(code = 400, message = "Bad request. Provider ID must be an integer and larger than 0."),
@@ -116,7 +122,10 @@ public interface ProviderApi {
      * @param filterRequest  (optional)
      * @return Provider list found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list provider that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getProviderList", notes = "", response = ProviderDto.class, responseContainer = "List", tags={  })
+    @ApiOperation(value = "Path used to list provider that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getProviderList", notes = "", response = ProviderDto.class, responseContainer = "List", authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Provider list found successfully", response = ProviderDto.class, responseContainer = "List") })
     @RequestMapping(
@@ -151,7 +160,10 @@ public interface ProviderApi {
      * @param filterRequest  (optional)
      * @return Provider page found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list provider page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getProviderPage", notes = "", response = PageofProviderDto.class, tags={  })
+    @ApiOperation(value = "Path used to list provider page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getProviderPage", notes = "", response = PageofProviderDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Provider page found successfully", response = PageofProviderDto.class) })
     @RequestMapping(
@@ -191,7 +203,10 @@ public interface ProviderApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to save a new Provider in the system", nickname = "saveProvider", notes = "", response = ProviderDto.class, tags={  })
+    @ApiOperation(value = "Path used to save a new Provider in the system", nickname = "saveProvider", notes = "", response = ProviderDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Provider saved successfully", response = ProviderDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),
@@ -236,7 +251,10 @@ public interface ProviderApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to update or modify an existing Provider in the system", nickname = "updateProvider", notes = "", response = ProviderDto.class, tags={  })
+    @ApiOperation(value = "Path used to update or modify an existing Provider in the system", nickname = "updateProvider", notes = "", response = ProviderDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Provider updated successfully", response = ProviderDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),

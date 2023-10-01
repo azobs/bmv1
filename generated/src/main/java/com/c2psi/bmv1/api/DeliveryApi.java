@@ -24,7 +24,7 @@ import javax.validation.constraints.*;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-28T04:24:19.978343600+01:00[Africa/Casablanca]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-30T16:03:01.698280900+01:00[Africa/Casablanca]")
 @Validated
 @Api(value = "delivery", description = "the delivery API")
 public interface DeliveryApi {
@@ -44,7 +44,10 @@ public interface DeliveryApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to delete a Delivery in the system with its id", nickname = "deleteDeliveryById", notes = "", response = Boolean.class, tags={  })
+    @ApiOperation(value = "Path used to delete a Delivery in the system with its id", nickname = "deleteDeliveryById", notes = "", response = Boolean.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Delivery deleted successfully", response = Boolean.class),
         @ApiResponse(code = 400, message = "Bad request. Delivery ID must be an integer and larger than 0."),
@@ -79,7 +82,10 @@ public interface DeliveryApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to delete a Deliverydetails in the system with its id", nickname = "deleteDeliverydetailsById", notes = "", response = Boolean.class, tags={  })
+    @ApiOperation(value = "Path used to delete a Deliverydetails in the system with its id", nickname = "deleteDeliverydetailsById", notes = "", response = Boolean.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Deliverydetails deleted successfully", response = Boolean.class),
         @ApiResponse(code = 400, message = "Bad request. Deliverydetails ID must be an integer and larger than 0."),
@@ -114,7 +120,10 @@ public interface DeliveryApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Find a Delivery in the system by its id", nickname = "getDeliveryById", notes = "", response = DeliveryDto.class, tags={  })
+    @ApiOperation(value = "Find a Delivery in the system by its id", nickname = "getDeliveryById", notes = "", response = DeliveryDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Delivery found successfully", response = DeliveryDto.class),
         @ApiResponse(code = 400, message = "Bad request. Delivery ID must be an integer and larger than 0."),
@@ -153,7 +162,10 @@ public interface DeliveryApi {
      * @param filterRequest  (optional)
      * @return Delivery list found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list delivery that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getDeliveryList", notes = "", response = DeliveryDto.class, responseContainer = "List", tags={  })
+    @ApiOperation(value = "Path used to list delivery that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getDeliveryList", notes = "", response = DeliveryDto.class, responseContainer = "List", authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Delivery list found successfully", response = DeliveryDto.class, responseContainer = "List") })
     @RequestMapping(
@@ -188,7 +200,10 @@ public interface DeliveryApi {
      * @param filterRequest  (optional)
      * @return Delivery page found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list delivery page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getDeliveryPage", notes = "", response = PageofDeliveryDto.class, tags={  })
+    @ApiOperation(value = "Path used to list delivery page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getDeliveryPage", notes = "", response = PageofDeliveryDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Delivery page found successfully", response = PageofDeliveryDto.class) })
     @RequestMapping(
@@ -228,7 +243,10 @@ public interface DeliveryApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Find a Deliverydetails in the system by its id", nickname = "getDeliverydetailsById", notes = "", response = DeliverydetailsDto.class, tags={  })
+    @ApiOperation(value = "Find a Deliverydetails in the system by its id", nickname = "getDeliverydetailsById", notes = "", response = DeliverydetailsDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Deliverydetails found successfully", response = DeliverydetailsDto.class),
         @ApiResponse(code = 400, message = "Bad request. Deliverydetails ID must be an integer and larger than 0."),
@@ -267,7 +285,10 @@ public interface DeliveryApi {
      * @param filterRequest  (optional)
      * @return Delivery details list found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list delivery details that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getDeliverydetailsList", notes = "", response = DeliverydetailsDto.class, responseContainer = "List", tags={  })
+    @ApiOperation(value = "Path used to list delivery details that respect certain criteria. A criteria is an instance of a Filter object", nickname = "getDeliverydetailsList", notes = "", response = DeliverydetailsDto.class, responseContainer = "List", authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Delivery details list found successfully", response = DeliverydetailsDto.class, responseContainer = "List") })
     @RequestMapping(
@@ -302,7 +323,10 @@ public interface DeliveryApi {
      * @param filterRequest  (optional)
      * @return Deliverydetails page found successfully (status code 200)
      */
-    @ApiOperation(value = "Path used to list deliverydetails page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getDeliverydetailsPage", notes = "", response = PageofDeliverydetailsDto.class, tags={  })
+    @ApiOperation(value = "Path used to list deliverydetails page by page that respect certain criteria. With the Page object, we can configure the page number and size that we want", nickname = "getDeliverydetailsPage", notes = "", response = PageofDeliverydetailsDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Deliverydetails page found successfully", response = PageofDeliverydetailsDto.class) })
     @RequestMapping(
@@ -342,7 +366,10 @@ public interface DeliveryApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to save a new Delivery in the system", nickname = "saveDelivery", notes = "", response = DeliveryDto.class, tags={  })
+    @ApiOperation(value = "Path used to save a new Delivery in the system", nickname = "saveDelivery", notes = "", response = DeliveryDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Delivery saved successfully", response = DeliveryDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),
@@ -387,7 +414,10 @@ public interface DeliveryApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to save a new Deliverydetails in the system", nickname = "saveDeliverydetails", notes = "", response = DeliverydetailsDto.class, tags={  })
+    @ApiOperation(value = "Path used to save a new Deliverydetails in the system", nickname = "saveDeliverydetails", notes = "", response = DeliverydetailsDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Delivery details saved successfully", response = DeliverydetailsDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),
@@ -432,7 +462,10 @@ public interface DeliveryApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to update or modify an existing delivery in the system", nickname = "updateDelivery", notes = "", response = DeliveryDto.class, tags={  })
+    @ApiOperation(value = "Path used to update or modify an existing delivery in the system", nickname = "updateDelivery", notes = "", response = DeliveryDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Delivery updated successfully", response = DeliveryDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),
@@ -477,7 +510,10 @@ public interface DeliveryApi {
      *         or The expected ressource is not found. (status code 404)
      *         or Unexpected error at the server side. (status code 500)
      */
-    @ApiOperation(value = "Path used to update or modify an existing deliverydetails in the system", nickname = "updateDeliverydetails", notes = "", response = DeliverydetailsDto.class, tags={  })
+    @ApiOperation(value = "Path used to update or modify an existing deliverydetails in the system", nickname = "updateDeliverydetails", notes = "", response = DeliverydetailsDto.class, authorizations = {
+        
+        @Authorization(value = "BearerAuth")
+         }, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Deliverydetails updated successfully", response = DeliverydetailsDto.class),
         @ApiResponse(code = 400, message = "Bad request. There is something wrong in the request."),
